@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-580, -2690)" fill="#162CB9">
+            <g id="Bitmap" transform="translate(390, 2478)">
+                <g id="Group-14" transform="translate(168, 168)">
+                    <path d="M40.1888609,48.8329164 L43.221106,64.015181 C43.3292736,64.5567696 42.9779165,65.0835011 42.4363279,65.1916688 C42.3070348,65.2174915 42.1739114,65.2174915 42.0446183,65.1916688 L26.8623536,62.1594236 C26.320765,62.051256 25.9694079,61.5245245 26.0775755,60.9829359 C26.1162599,60.7892455 26.2114369,60.6113487 26.3511017,60.4716839 L38.5011212,48.3216644 C38.8916455,47.9311401 39.5248105,47.9311401 39.9153347,48.3216644 C40.0549995,48.4613291 40.1501765,48.6392259 40.1888609,48.8329164 Z" id="Rectangle" transform="translate(34.2721, 56.2426) rotate(-45) translate(-34.2721, -56.2426)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

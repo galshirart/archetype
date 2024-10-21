@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="196px" height="196px" viewBox="0 0 196 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>step-2</title>
+    <defs>
+        <path d="M60.8944272,0.447213595 L70.2111456,5.10557281 C70.7051241,5.35256206 70.9053485,5.9532351 70.6583592,6.4472136 C70.5615955,6.640741 70.404673,6.79766349 70.2111456,6.89442719 L12.8944272,35.5527864 C12.3313722,35.8343139 11.6686278,35.8343139 11.1055728,35.5527864 L1.78885438,30.8944272 C1.29487588,30.6474379 1.09465154,30.0467649 1.34164079,29.5527864 C1.43840449,29.359259 1.59532698,29.2023365 1.78885438,29.1055728 L59.1055728,0.447213595 C59.6686278,0.165686105 60.3313722,0.165686105 60.8944272,0.447213595 Z" id="path-1"></path>
+        <path d="M36,33.2134066 L52,41.2134066" id="path-2"></path>
+        <path d="M42,30.2134066 L58,38.2134066" id="path-3"></path>
+        <path d="M30,36.2134066 L46,44.2134066" id="path-4"></path>
+        <path d="M24,39.2134066 L40,47.2134066" id="path-5"></path>
+        <path d="M76.8944272,40.4472136 L86.2111456,45.1055728 C86.7051241,45.3525621 86.9053485,45.9532351 86.6583592,46.4472136 C86.5615955,46.640741 86.404673,46.7976635 86.2111456,46.8944272 L76.8944272,51.5527864 C76.3313722,51.8343139 75.6686278,51.8343139 75.1055728,51.5527864 L65.7888544,46.8944272 C65.2948759,46.6474379 65.0946515,46.0467649 65.3416408,45.5527864 C65.4384045,45.359259 65.595327,45.2023365 65.7888544,45.1055728 L75.1055728,40.4472136 C75.6686278,40.1656861 76.3313722,40.1656861 76.8944272,40.4472136 Z" id="path-6"></path>
+        <path d="M106,28.2134066 C108.209139,28.2134066 110,27.3179761 110,26.2134066 C110,25.1088371 108.209139,24.2134066 106,24.2134066 C103.790861,24.2134066 102,25.1088371 102,26.2134066 C102,27.3179761 103.790861,28.2134066 106,28.2134066 Z" id="path-7"></path>
+        <path d="M114,32.2134066 C116.209139,32.2134066 118,31.3179761 118,30.2134066 C118,29.1088371 116.209139,28.2134066 114,28.2134066 C111.790861,28.2134066 110,29.1088371 110,30.2134066 C110,31.3179761 111.790861,32.2134066 114,32.2134066 Z" id="path-8"></path>
+        <path d="M98,32.2134066 C100.209139,32.2134066 102,31.3179761 102,30.2134066 C102,29.1088371 100.209139,28.2134066 98,28.2134066 C95.790861,28.2134066 94,29.1088371 94,30.2134066 C94,31.3179761 95.790861,32.2134066 98,32.2134066 Z" id="path-9"></path>
+        <path d="M106,36.2134066 C108.209139,36.2134066 110,35.3179761 110,34.2134066 C110,33.1088371 108.209139,32.2134066 106,32.2134066 C103.790861,32.2134066 102,33.1088371 102,34.2134066 C102,35.3179761 103.790861,36.2134066 106,36.2134066 Z" id="path-10"></path>
+        <path d="M90,36.2134066 C92.209139,36.2134066 94,35.3179761 94,34.2134066 C94,33.1088371 92.209139,32.2134066 90,32.2134066 C87.790861,32.2134066 86,33.1088371 86,34.2134066 C86,35.3179761 87.790861,36.2134066 90,36.2134066 Z" id="path-11"></path>
+        <path d="M98,40.2134066 C100.209139,40.2134066 102,39.3179761 102,38.2134066 C102,37.1088371 100.209139,36.2134066 98,36.2134066 C95.790861,36.2134066 94,37.1088371 94,38.2134066 C94,39.3179761 95.790861,40.2134066 98,40.2134066 Z" id="path-12"></path>
+        <path d="M60.8944272,48.4472136 L70.2111456,53.1055728 C70.7051241,53.3525621 70.9053485,53.9532351 70.6583592,54.4472136 C70.5615955,54.640741 70.404673,54.7976635 70.2111456,54.8944272 L60.8944272,59.5527864 C60.3313722,59.8343139 59.6686278,59.8343139 59.1055728,59.5527864 L49.7888544,54.8944272 C49.2948759,54.6474379 49.0946515,54.0467649 49.3416408,53.5527864 C49.4384045,53.359259 49.595327,53.2023365 49.7888544,53.1055728 L59.1055728,48.4472136 C59.6686278,48.1656861 60.3313722,48.1656861 60.8944272,48.4472136 Z" id="path-13"></path>
+        <path d="M92,42.2134066 C94.4900722,42.2134066 96.7675741,41.7583455 98.5180021,41.0054751 C99.9392875,40.394171 105.76662,37.4634815 116,32.2134066 L102,25.2134066 C92.0920953,30.1961486 86.5500551,32.9478517 85.3738792,33.4685159 C83.3045278,34.384567 82,35.7228146 82,37.2134066 C82,39.9748304 86.4771525,42.2134066 92,42.2134066 Z" id="path-14"></path>
+    </defs>
+    <g id="step-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(98, 98.1067) scale(-1, 1) translate(-98, -98.1067)translate(14, 44)">
+            <polygon id="Path-55" stroke="#162CB9" fill="#FFFFFF" stroke-linejoin="round" points="-8.76693163e-12 42 84 -4.77474854e-13 168 42 168 66 84 108 -8.76693163e-12 66"></polygon>
+            <polyline id="Path-109" stroke="#162CB9" stroke-linejoin="round" points="-5.77565773e-12 42.2134066 84 84.2134066 84 108.213407"></polyline>
+            <line x1="84" y1="84.2134066" x2="168" y2="42.2134066" id="Path-110" stroke="#162CB9" stroke-linejoin="round"></line>
+            <g id="Group-12" transform="translate(24, 12)" stroke-linejoin="round">
+                <g id="Path-55">
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-1"></use>
+                </g>
+                <g id="Path-114" stroke-linecap="round">
+                    <use fill="#FFFFFF" xlink:href="#path-2"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-2"></use>
+                </g>
+                <g id="Path-114" stroke-linecap="round">
+                    <use fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-3"></use>
+                </g>
+                <g id="Path-114" stroke-linecap="round">
+                    <use fill="#FFFFFF" xlink:href="#path-4"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-4"></use>
+                </g>
+                <g id="Path-114" stroke-linecap="round">
+                    <use fill="#FFFFFF" xlink:href="#path-5"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-5"></use>
+                </g>
+                <g id="Path-55">
+                    <use fill="#FFFFFF" xlink:href="#path-6"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-6"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="#FFFFFF" xlink:href="#path-7"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.2" fill="#162CB9" xlink:href="#path-7"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="#FFFFFF" xlink:href="#path-8"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-8"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="#FFFFFF" xlink:href="#path-9"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-9"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="#FFFFFF" xlink:href="#path-10"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.2" fill="#162CB9" xlink:href="#path-10"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="#FFFFFF" xlink:href="#path-11"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-11"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="#FFFFFF" xlink:href="#path-12"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.1" fill="#162CB9" xlink:href="#path-12"></use>
+                </g>
+                <g id="Path-55">
+                    <use fill="#FFFFFF" xlink:href="#path-13"></use>
+                    <use stroke="#162CB9" stroke-width="1" fill-opacity="0.2" fill="#162CB9" xlink:href="#path-13"></use>
+                </g>
+            </g>
+            <g id="Oval" stroke-linejoin="round" transform="translate(99, 33.7134) scale(-1, -1) translate(-99, -33.7134)">
+                <use fill="#FFFFFF" xlink:href="#path-14"></use>
+                <use stroke="#162CB9" stroke-width="1" fill="#162CB9" xlink:href="#path-14"></use>
+            </g>
+            <path d="M90,43.2134066 C95.5228475,43.2134066 100,40.9748304 100,38.2134066 C100,36.3724574 100,35.3013219 100,35 L99,34 L81,34 L80,35 C80,35.5871387 80,36.6582742 80,38.2134066 C80,40.9748304 84.4771525,43.2134066 90,43.2134066 Z" id="Oval" stroke="#162CB9" fill="#FFFFFF" stroke-linejoin="round"></path>
+            <path d="M100,35.2134066 C100,32.4519829 95.5228475,30.2134066 90,30.2134066 C84.4771525,30.2134066 80,32.4519829 80,35.2134066" id="Path" stroke="#162CB9" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M90,40.2134066 C95.5228475,40.2134066 100,37.9748304 100,35.2134066 C100,32.4519829 95.5228475,30.2134066 90,30.2134066 C84.4771525,30.2134066 80,32.4519829 80,35.2134066 C80,37.9748304 84.4771525,40.2134066 90,40.2134066 Z" id="Oval" stroke-opacity="0.2" stroke="#162CB9" stroke-linejoin="round"></path>
+            <polygon id="Path-60" fill="#162CB9" opacity="0.200000003" points="168 42.2134066 84 84 84 108.213407 168 66.2134066"></polygon>
+        </g>
+    </g>
+</svg>
