@@ -57,7 +57,7 @@ h3 {
     font-weight:400;
     font-size:20px;
     margin:0 0 30px;
-    max-width:460px;
+    max-width:560px;
 }
 p {
     max-width:600px
@@ -444,6 +444,10 @@ a {
 }
 .blocks.grid img {
     width:48px
+}
+.product-ui {
+    width:930px;
+    margin-top:30px;
 }
 .testimonial {
     display: inline-block;
