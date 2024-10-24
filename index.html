@@ -13,6 +13,7 @@
         <a href="#" class="button ghost">Contact</a>
         <a href="#" class="button">LOGIN</a>
         <a href="#" class="button blue hide pop">GET STARTED</a>
+        <div class="button ghost hamburger"></div>
     </div>
 </div>
 
@@ -155,13 +156,15 @@
 
 <script>
 
-document.addEventListener('mousemove', function(event) {
-    x = ((event.clientX / window.innerWidth) * 100)-50;
-    y = ((event.clientY / window.innerHeight) * 100)-50;
-    $('video.hero').css('transform','translateX('+x+'px) translateY('+y+'px)')
-    $('.hand-container').css('margin-top',y*2+'px')
-    $('.hand-container').css('margin-left',+x*2+'px')
-});
+if (window.innerWidth > 1100) {
+    document.addEventListener('mousemove', function(event) {
+        x = ((event.clientX / window.innerWidth) * 100)-50;
+        y = ((event.clientY / window.innerHeight) * 100)-50;
+        $('video.hero').css('transform','translateX('+x+'px) translateY('+y+'px)')
+        $('.hand-container').css('margin-top',y*2+'px')
+        $('.hand-container').css('margin-left',+x*2+'px')
+    });
+}
 
 document.addEventListener('scroll', function() {
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;

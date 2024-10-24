@@ -1,10 +1,10 @@
 @font-face {
-    font-family: ABC Diatype Variable;
-    src: url("fonts/ABCDiatypeVariable.ttf");
+    font-family: 'ABC Diatype Variable';
+    src: url("fonts/ABCDiatypeVariable.ttf") format("truetype");
 }
 @font-face {
-    font-family: ABC Diatype Mono Variable;
-    src: url("fonts/ABCDiatypeMonoVariable.ttf");
+    font-family: 'ABC Diatype Mono Variable';
+    src: url("fonts/ABCDiatypeMonoVariable.ttf") format("truetype");
 }
 body {
     margin:0;
@@ -79,16 +79,16 @@ a {
     height:48px;
     line-height:46px;
     padding:0 22px;
-    background:white;
+    background-color:white;
     border:1px solid #162CB9;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    font-weight:600;
     letter-spacing: 1px;
     font-size:14px;
     transition: all .1s, margin 400ms;
     cursor: pointer;
+    min-width:48px;
 }
 .button:after {
     display: block;
@@ -114,7 +114,7 @@ a {
     height:calc(100% - 2px);
 }
 .button.ghost {
-    background:none;
+    background-color:transparent;
     border:0;
     padding:0 16px;
     letter-spacing: 0;
@@ -176,6 +176,12 @@ a {
 .menu .button.hide {
     margin-right:-168px;
     opacity:0;
+}
+.hamburger {
+    background-image:url('assets/hamburger.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    display: none;
 }
 .bars-container {
     position:relative;
@@ -509,11 +515,15 @@ img.workflows-platform-illustration {
 }
 
 @media screen and (max-width: 1100px) {
-    section { padding: 50px 20px; }
+    section { padding: 30px 16px; }
     section.flex { display: block;}
     section.narrow p {max-width:300px}
-    h1 { font-size:56px; margin-bottom:20px}
-    h2 { font-size:40px; max-width: 500px}
-    h3 { font-size:20px; max-width:300px}
-    .menu a.ghost { display: none;}
+    h1 { font-size:40px; margin-bottom:20px}
+    h2 { font-size:40px; }
+    h3 { font-size:16px; max-width:300px}
+    .menu a { display: none;}
+    .hamburger { display: block;}
+    .bars-container { margin-top: 140px; padding-left: 128px; }
+    .hand { left:120 }
+    .sparkles {display:none}
 }
