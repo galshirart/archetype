@@ -67,6 +67,9 @@ a {
     color:#162CB9;
     text-decoration: none;
 }
+.mobile-show {
+    display: none;
+}
 .center {
     text-align: center;
     display: flex;
@@ -523,6 +526,8 @@ img.workflows-platform-illustration {
     h1 { font-size:40px; margin-bottom:20px}
     h2 { font-size:40px; }
     h3 { font-size:16px; max-width:300px}
+    .mobile-hide { display: none;}
+    .mobile-show { display: block;}
     .menu a { display: none;}
     .hamburger { display: block;}
     .bars-container { margin-top: 140px; padding-left: 128px; }
@@ -533,4 +538,5 @@ img.workflows-platform-illustration {
     .blocks .block p {margin:0 auto}
     .blocks.grid { grid-template-columns: 50% 50%; }
     .blocks.grid .block { min-height:auto; height:200px }
+    img.product-ui { width:100% }
 }
