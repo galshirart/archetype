@@ -294,10 +294,10 @@ document.addEventListener('scroll', function() {
         $('.menu .button.blue').addClass('hide')
     }
 
-    $('.bars-container').css({
-        'top': scrollTop/3 + 'px',
-    })
-    $('.bars-container .bar-chart').css('opacity', 100-scrollTop/8+'%')
+    // $('.bars-container').css({
+    //     'top': scrollTop/3 + 'px',
+    // })
+    // $('.bars-container .bar-chart').css('opacity', 100-scrollTop/8+'%')
 
     if (scrollTop >= $('.product-ui').offset().top-500) {
         $('.product-ui.mobile-hide img').eq(1).css('opacity','1')
