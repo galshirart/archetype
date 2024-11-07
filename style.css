@@ -70,9 +70,6 @@ a {
     color:#162CB9;
     text-decoration: none;
 }
-.bold {
-    font-weight:700;
-}
 .mobile-show {
     display: none;
 }
@@ -194,12 +191,14 @@ a {
     display: none;
 }
 .drop-menu {
+    width:calc(100% - 32px);
     position: fixed;
-    z-index: 3;
-    top:78px;
-    background:#f7f5ef;
-    width:100%;
     left:0;
+    right:0;
+    margin:auto;
+    z-index: 3;
+    top:96px;
+    background:#f7f5ef;
     border-radius: 16px;
     overflow: hidden;
     animation-name:drop-menu;
@@ -501,8 +500,18 @@ a {
     margin-left: -10px;
 }
 .product-ui {
-    width:1040px;
     margin-top:30px;
+    position: relative;
+}
+.product-ui img {
+    width:1040px;
+}
+.product-ui img:nth-child(n+2) {
+    position: absolute;
+    left:0;
+    top:0;
+    opacity:0;
+    transition: opacity .5s
 }
 .testimonial {
     width:25%;
@@ -580,6 +589,7 @@ img.workflows-platform-illustration {
     .blocks .block p {margin:0 auto}
     .blocks.grid { grid-template-columns: 50% 50%; }
     .blocks.grid .block { min-height:auto; height:200px }
-    .spinning-triangle { width:40px; top: 4px; right: -4px; margin-left: -4px; }
-    img.product-ui { width:100% }
+    .spinning-triangle { width:40px; top: 4px; right: -6px; margin-left: -6px; }
+    .product-ui { width:100%}
+    .product-ui img { width:100% }
 }

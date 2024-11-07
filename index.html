@@ -14,16 +14,17 @@
         <a href="#" class="button blue hide pop">GET STARTED</a>
         <div class="button ghost hamburger"></div>
     </div>
+</div>
 
-    <div class="drop-menu border hide">
-        <a href="#" class="button ghost bold">Get started</a>
-        <a href="#" class="button ghost bold">Login</a>
-        <div class="line"></div>
-        <a href="#" class="button ghost">Home</a>
-        <a href="#" class="button ghost">About</a>
-        <a href="#" class="button ghost">We're hiring</a>
-        <a href="#" class="button ghost">Contact</a>
-    </div>
+
+<div class="drop-menu border hide">
+    <a href="#" class="button ghost">Get started</a>
+    <a href="#" class="button ghost">Login</a>
+    <div class="line"></div>
+    <a href="#" class="button ghost">Home</a>
+    <a href="#" class="button ghost">About</a>
+    <a href="#" class="button ghost">We're hiring!</a>
+    <a href="#" class="button ghost">Contact</a>
 </div>
 
 <section>
@@ -78,10 +79,19 @@
 <section class="center">
     <h2>One platform for all your workflows, powered <span style="white-space: nowrap">by <img src="assets/spinning-triangle.gif" class="spinning-triangle" /> AI</span></h2>
     <h3>No more juggling between diffrent tools. Keep all your operations within your fully customized workspace.</h3>
-    <img class="product-ui mobile-hide" src="assets/product-ui.png" />
+    
+    <div class="product-ui mobile-hide">
+        <img src="assets/product-ui-1.png" />
+        <img src="assets/product-ui-2.png" />
+        <img src="assets/product-ui-3.png" />
+    </div>
 </section>
-<img class="product-ui mobile-show" src="assets/product-ui-mobile.png" />
 
+<div class="product-ui mobile-show">
+    <img src="assets/product-ui-mobile-1.png" />
+    <img src="assets/product-ui-mobile-2.png" />
+    <img src="assets/product-ui-mobile-3.png" />
+</div>
 
 <section class="center">
     <h2>Easy, instant, effective</h2>
@@ -151,11 +161,12 @@
         <div class="flex">
             <img src="assets/archetype-logo-white.svg">
             <div class="mobile-hide">
+                <a href="#">Login</a>
+                <a href="#">Get started</a>
                 <a href="#">Home</a>
                 <a href="#">About</a>
+                <a href="#">We're hiring!</a>
                 <a href="#">Contact</a>
-                <a href="#">Login</a>
-                <a href="#">Sign up</a>
             </div>
         </div>
         <p>Supercharge your work with the power of AI</p>
@@ -197,14 +208,20 @@ document.addEventListener('scroll', function() {
     }
 
     $('.bars-container').css({
-        'transform': 'translateY('+scrollTop/3 + 'px)',
-        'opacity': 100-scrollTop/8+'%'
+        'top': scrollTop/3 + 'px',
     })
+    $('.bars-container .bar-chart').css('opacity', 100-scrollTop/8+'%')
+
+    if (scrollTop >= $('.product-ui').offset().top-500) {
+        $('.product-ui.mobile-hide img').eq(1).css('opacity','1')
+        $('.product-ui.mobile-show img').eq(1).css('opacity','1')
+        setTimeout(function() {
+            $('.product-ui.mobile-hide img').eq(2).css('opacity','1')
+            $('.product-ui.mobile-show img').eq(2).css('opacity','1')
+        },1000)
+    } 
 
 });
-
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     $('.typewriter').each(function(index, element) {
