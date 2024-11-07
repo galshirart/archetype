@@ -21,6 +21,10 @@ body {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
+::selection {
+    color: white;
+    background: #162CB9;
+  }
 section {
     padding:60px 80px;
     max-width:1400px;
@@ -533,6 +537,9 @@ label {
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-gap: 1px;
 }
+.blocks.grid.four {
+    grid-template-columns: 25% 25% 25% 25%
+}
 .blocks.grid .block {
     width:100%;
     flex-direction: column;
@@ -653,7 +660,7 @@ img.assembly-line {
     .blocks.flex {display: block;}
     .blocks .block {width: 100%; border:0; border-bottom: 1px solid rgba(22, 44, 185, 0.1)}
     .blocks .block p {margin:0 auto}
-    .blocks.grid { grid-template-columns: 50% 50%; }
+    .blocks.grid, .blocks.grid.four { grid-template-columns: 50% 50%; }
     .blocks.grid .block { min-height:auto; height:200px }
     .spinning-triangle { width:40px; top: 4px; right: -6px; margin-left: -6px; }
     .product-ui { width:100%}
