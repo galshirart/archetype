@@ -4,12 +4,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <div class="header flex border">
-    <a href="/"><img class="logo" src="assets/archetype-logo.svg" /></a>
+    <a href="#"><img class="logo" src="assets/archetype-logo.svg" /></a>
     <div class="menu flex">
-        <a href="#" class="button ghost">Home</a>
-        <a href="#" class="button ghost">About</a>
-        <a href="#" class="button ghost">We're hiring!</a>
-        <a href="#" class="button ghost">Contact</a>
+        <a href="#" class="button ghost current" data-page="home">Home</a>
+        <a href="#about" class="button ghost" data-page="about">About <span class="tooltip"><label>WE'RE HIRING!</label></span></a>
+        <a href="#contact" class="button ghost" data-page="contact">Contact</a>
         <a href="#" class="button login">LOGIN</a>
         <a href="#" class="button blue hide pop">GET STARTED</a>
         <div class="button ghost hamburger"></div>
@@ -22,10 +21,11 @@
     <a href="#" class="button ghost">Login</a>
     <div class="line"></div>
     <a href="#" class="button ghost">Home</a>
-    <a href="#" class="button ghost">About</a>
-    <a href="#" class="button ghost">We're hiring!</a>
-    <a href="#" class="button ghost">Contact</a>
+    <a href="#about" class="button ghost">About</a>
+    <a href="#contact" class="button ghost">Contact</a>
 </div>
+
+<page page="home">
 
 <section>
     <h1>
@@ -156,6 +156,75 @@
     <img class="workflows-platform-illustration mobile-hide" src="assets/workflows-platform-illustration.png" />
 </section>
 
+</page>
+
+
+<page page="about" class="hide">
+<section>
+    <h2>We are on a mission to empower professionals worldwide to leverage the power of software</h2>
+    <h3>We're a team of ex-Palantir developers and designers transforming how businesses create custom software with our no-code, AI-driven Process Defined Software™. Currently in stealth mode, we’re empowering businesses to develop flexible, tailored solutions without costly custom development.</h3>
+</section>
+
+<div class="img-container">
+    <img src="assets/assembly-line.png" class="assembly-line" />
+</div>
+
+<section class="center">
+    <h2>The team</h2>
+    <div class="grid blocks border">
+        <div class="block flex"><img src="assets/team-shaun.jpg" class="avatar"/>
+            <h3>Shaun Springer</h3>
+            <label>CEO & CO-FOUNDER</label>
+        </div>
+        <div class="block flex"><img src="assets/team-julien.jpg" class="avatar"/>
+            <h3>Julien Levy</h3>
+            <label>CTO & CO-FOUNDER</label>
+        </div>
+        <div class="block flex"><img src="assets/team-jishai.jpg" class="avatar"/>
+            <h3>Jishai Evers</h3>
+            <label>CPO & CO-FOUNDER</label>
+        </div>
+        <div class="block flex"><img src="assets/team-martijn.jpg" class="avatar"/>
+            <h3>Martijn Arts</h3>
+            <label>SOFTWARE ENGINEER</label>
+        </div>
+        <div class="block flex"><img src="assets/team-noa.jpg" class="avatar"/>
+            <h3>Noa Hadar</h3>
+            <label>SOFTWARE ENGINEER</label>
+        </div>
+        <div class="block flex"><img src="assets/team-alon.jpg" class="avatar"/>
+            <h3>Alon Roth<h3>
+            <label>SOFTWARE ENGINEER</label>
+        </div>
+        <div class="block flex"><img src="assets/team-arthur.jpg" class="avatar"/>
+            <h3>Arthur Fernandes<h3>
+            <label>SOFTWARE ENGINEER</label>
+        </div>
+        <div class="block flex"><img src="assets/team-kelsey.jpg" class="avatar"/>
+            <h3>Kelsey Hand-Mark<h3>
+            <label>PRODUCT MARKETING</label>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Join us!</h2>
+    <h3>We're always in the lookout for talented and passionate people to join our team. We're well-funded and working fully remote. Check out our open positions below.</h3>
+    
+    <div class="open-position flex border"border"><div>
+        <h3>Software Engineer</h3>
+        Position description goes here, position description goes here, and position description goes here.
+    </div><a class="button" href="mailto:build@archetype.do">APPLY</a></div>
+    
+    <div class="open-position flex border"border"><div>
+        <h3>Frontend Expert</h3>
+        Position description goes here, position description goes here, and position description goes here.
+    </div><a class="button" href="mailto:build@archetype.do">APPLY</a></div>
+
+</section>
+
+</page>
+
 <div class="footer">
     <section>
         <div class="flex">
@@ -164,13 +233,11 @@
                 <a href="#">Login</a>
                 <a href="#">Get started</a>
                 <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">We're hiring!</a>
-                <a href="#">Contact</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
         <p>Supercharge your work with the power of AI</p>
-
     </section>
 </div>
 
@@ -186,6 +253,28 @@ $(document).click(function(event) {
     $('.drop-menu').toggle()
   }        
 });
+
+if ( window.location.hash ) {
+  nav()
+}
+
+$(window).on('hashchange', function() {
+  nav()
+})
+
+function nav() {
+  hash = window.location.hash.substring(1)
+  if (hash == "") {
+    window.location.href = window.location.href.replace(/#$/, '');
+  }
+  $('page').addClass('hide')
+  $('.menu a').removeClass('current')
+  $('.drop-menu').addClass('hide')
+    
+  $('html,body').animate({scrollTop: 0},'slow');
+  $('.header a[data-page='+window.location.hash.replace('#','')+']').addClass('current')
+  $('[page='+hash+']').removeClass('hide').scrollTop(0)
+}
 
 if (window.innerWidth > 1100) {
     document.addEventListener('mousemove', function(event) {
