@@ -225,6 +225,7 @@ a {
     margin:0 auto;
     overflow-x: clip;
     padding-left: 128px; 
+    transition:all 0ms;
 }
 .bars-container .grid {
     background-image:url('assets/pattern-isometric-grid.png');

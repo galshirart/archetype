@@ -195,7 +195,16 @@ document.addEventListener('scroll', function() {
     } else {
         $('.menu .button.blue').addClass('hide')
     }
+
+    $('.bars-container').css({
+        'transform': 'translateY('+scrollTop/3 + 'px)',
+        'opacity': 100-scrollTop/8+'%'
+    })
+
 });
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     $('.typewriter').each(function(index, element) {
