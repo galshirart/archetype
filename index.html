@@ -3,20 +3,28 @@
 <link href="style.css?4" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
 <div class="header flex border">
     <a href="/"><img class="logo" src="assets/archetype-logo.svg" /></a>
     <div class="menu flex">
         <a href="#" class="button ghost">Home</a>
         <a href="#" class="button ghost">About</a>
+        <a href="#" class="button ghost">We're hiring!</a>
         <a href="#" class="button ghost">Contact</a>
-        <a href="#" class="button">LOGIN</a>
+        <a href="#" class="button login">LOGIN</a>
         <a href="#" class="button blue hide pop">GET STARTED</a>
         <div class="button ghost hamburger"></div>
     </div>
-</div>
 
+    <div class="drop-menu border hide">
+        <a href="#" class="button ghost bold">Get started</a>
+        <a href="#" class="button ghost bold">Login</a>
+        <div class="line"></div>
+        <a href="#" class="button ghost">Home</a>
+        <a href="#" class="button ghost">About</a>
+        <a href="#" class="button ghost">We're hiring</a>
+        <a href="#" class="button ghost">Contact</a>
+    </div>
+</div>
 
 <section>
     <h1>
@@ -26,7 +34,6 @@
     <h3>Elevate your work and operate faster, smarter and better with cutting-edge tools built for you</h3>
     <a href="#" class="button blue big main">GET STARTED</a>
 </section>
-
 
 <div class="bars-container">
     <div class="grid"></div>
@@ -73,25 +80,25 @@
     <h3>Supercharge your business operations and run your work faster, smarter and better with cutting-edge tools built for you</h3>
     <div class="blocks flex border process">
         <div class="block"> 
-            <img src="assets/step-1-shadow.svg" />
-            <img src="assets/step-1.svg" />
+            <img src="assets/step-1-shadow.png" />
+            <img src="assets/step-1.png" />
             <p>Tell us about your workflows</p>
         </div>
         <div class="block"> 
-            <img src="assets/step-2-shadow.svg" />
-            <img src="assets/step-2.svg" />
+            <img src="assets/step-2-shadow.png" />
+            <img src="assets/step-2.png" />
             <p>Our AI creates your perfect workspace</p>
         </div>
         <div class="block"> 
-            <img src="assets/step-3-shadow.svg" />
-            <img src="assets/step-3.svg" />
+            <img src="assets/step-3-shadow.png" />
+            <img src="assets/step-3.png" />
             <p>Invite your team and get things done!</p>
         </div>
     </div>
 </section>
 
 <section class="center">
-    <h2>One platform for all your workflows, powered by AI</h2>
+    <h2>One platform for all your workflows, <span style="white-space: nowrap">powered by <img src="assets/spinning-triangle.gif" class="spinning-triangle" /> AI</span></h2>
     <h3>No more juggling between diffrent tools. Keep all your operations within your fully customized workspace.</h3>
     <img class="product-ui mobile-hide" src="assets/product-ui.png" />
 </section>
@@ -142,7 +149,7 @@
     <section>
         <div class="flex">
             <img src="assets/archetype-logo-white.svg">
-            <div>
+            <div class="mobile-hide">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
@@ -156,6 +163,17 @@
 </div>
 
 <script>
+
+$('.hamburger').click(function() {
+    $('.drop-menu').toggle()
+})
+
+$(document).click(function(event) { 
+  target = $(event.target);
+  if(!target.closest('.hamburger').length && $('.drop-menu').is(":visible")) {
+    $('.drop-menu').toggle()
+  }        
+});
 
 if (window.innerWidth > 1100) {
     document.addEventListener('mousemove', function(event) {
