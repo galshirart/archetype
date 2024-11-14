@@ -9,7 +9,7 @@
 body {
     margin:0;
     font-family: 'ABC Diatype';
-    color:#162CB9;
+    color:#192365;
     font-size:16px;
     margin:32px;
     font-size:16px;
@@ -134,6 +134,7 @@ label.negative {
     line-height:46px;
     padding:0 20px;
     background-color:white;
+    color:#162CB9;
     border:1px solid #162CB9;
     border-radius: 8px;
     position: relative;
@@ -354,8 +355,8 @@ input:disabled:focus + .input-icon {
     cursor: pointer;
     user-select: none;
 }
-.toggle-container.off {
-    color:rgba(22, 44, 185, 0.7)
+.toggle-container.off label {
+    opacity:0.7
 }
 .toggle-container.off:hover:not(.disabled) {
     color:#162CB9;
@@ -487,12 +488,15 @@ section {
     max-width: 1368px;
 }
 .header-menu h3 {
-    margin-right:8px;
+    margin-right:16px;
+    position: relative;
+    top:-1px;
 }
 .header-menu a {
     padding:4px 8px;
     cursor: pointer;
     border-radius: 8px;
+    color:#192365;
 }
 .header-menu a:hover {
     background:rgba(22, 44, 185, 0.1)
@@ -570,7 +574,7 @@ section > .grid {
 .color label {
     position: absolute;
     right: 0;
-    top:3px;
+    top:6px;
 }
 .tile {
     height:100px;
