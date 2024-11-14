@@ -1,0 +1,584 @@
+<title>Archetype Design System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="style.css?4" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<section class="header-menu flex border left">
+    <div class="logo"></div>
+    <h3>Design System</h3>
+    <a onclick="scrollToSection('color')">Color</a>
+    <a onclick="scrollToSection('typography')">Typography</a>
+    <a onclick="scrollToSection('interface')">Interface</a>
+    <a onclick="scrollToSection('layout')">Layout</a>
+    <a onclick="scrollToSection('illustration')">Illustration</a>
+</section>
+
+<section data-section="color" class="divider"><h2>Color</h2></section>
+
+<section>
+    <!-- <div class="info">
+        <h3>Primary Palette</h3>
+    </div> -->
+    <div class="frame border">
+        <div class="color" onclick="copy(this)">
+            <p>White</p>
+            <div class="tile border" style="background:white"></div>
+            <label>#FFFFFF</label>
+        </div>
+        <div class="color" onclick="copy(this)">
+            <p>Beige</p>
+            <div class="tile border" style="background:#f7f5ef"></div>
+            <label>#F7F5EF</label>
+        </div>
+        <div class="color" onclick="copy(this)">
+            <p>Blue</p>
+            <div class="tile negative border" style="background:#162CB9"></div>
+            <label>#162CB9</label>
+        </div>
+    </div>
+    <div class="frame border">
+        <div class="color" onclick="copy(this)">
+            <p>5% Blue</p>
+            <div class="tile border" style="background:rgba(22, 44, 185, 0.05)"></div>
+            <label>rgba(22, 44, 185, 0.05)</label>
+        </div>
+        <div class="color" onclick="copy(this)">
+            <p>10% Blue</p>
+            <div class="tile border" style="background:rgba(22, 44, 185, 0.1)"></div>
+            <label>rgba(22, 44, 185, 0.1)</label>
+        </div>
+        <div class="color" onclick="copy(this)">
+            <p>20% Blue</p>
+            <div class="tile border" style="background:rgba(22, 44, 185, 0.2)"></div>
+            <label>rgba(22, 44, 185, 0.2)</label>
+        </div>
+    </div>
+</section>
+
+<section data-section="typography" class="divider"><h2>Typography</h2></section>
+
+<section>
+    <div class="frame border">
+        <h1>ABC Diatype</h1>
+        <h2 style="margin-top:40px">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0 1 2 3 4 5 6 7 8 9</h2>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>H1</h3>
+        <label>HEADING 1</label>
+        <div class="border">
+            <label class="header">DESKTOP</label>
+            <p class="flex wide"><label>FONT SIZE</label>84PX</p>
+            <p class="flex wide"><label>LETTER SPACING</label>-2PX</p>
+            <p class="flex wide"><label>LINE HEIGHT</label>100%</p>
+        </div>
+        <div class="border">
+            <label class="header">MOBILE</label>
+            <p class="flex wide"><label>FONT SIZE</label>52PX</p>
+        </div>
+    </div>
+    <div class="frame border" view="desktop">
+        <h1>Next-gen businesses run on Archetype</h1>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>H2</h3>
+        <label>HEADING 2</label>
+        <div class="border">
+            <label class="header">DESKTOP</label>
+            <p class="flex wide"><label>FONT SIZE</label>60PX</p>
+            <p class="flex wide"><label>LETTER SPACING</label>-1PX</p>
+            <p class="flex wide"><label>LINE HEIGHT</label>110%</p>
+        </div>
+        <div class="border">
+            <label class="header">MOBILE</label>
+            <p class="flex wide"><label>FONT SIZE</label>38PX</p>
+        </div>
+    </div>
+    <div class="frame border" view="desktop">
+        <h2>One platform for all your workflows, powered by AI</h2>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>H3</h3>
+        <label>HEADING 3</label>
+        <div class="border">
+            <label class="header">DESKTOP</label>
+            <p class="flex wide"><label>FONT SIZE</label>24PX</p>
+        </div>
+        <div class="border">
+            <label class="header">MOBILE</label>
+            <p class="flex wide"><label>FONT SIZE</label>18PX</p>
+        </div>
+    </div>
+    <div class="frame border" view="desktop">
+        <h3>Elevate your work and operate faster, smarter and better with cutting-edge tools built for you</h3>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>P</h3>
+        <label>PARAGRAPH</label>
+        <div class="border">
+            <label class="header">DESKTOP</label>
+            <p class="flex wide"><label>FONT SIZE</label>16PX</p>
+        </div>
+        <div class="border">
+            <label class="header">MOBILE</label>
+            <p class="flex wide"><label>FONT SIZE</label>14PX</p>
+        </div>
+    </div>
+    <div class="frame border" view="desktop">
+        <p>We're a team of developers and designers transforming how businesses create custom software with our no-code, AI-driven Process Defined Software™. Currently in stealth mode, we're empowering businesses to develop flexible, tailored solutions without costly custom development.</p>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>Label</h3>
+        <label>SMALL TEXT / EYEBROW</label>
+        <div class="border">
+            <p class="flex wide"><label>FONT SIZE</label>10PX</p>
+            <p class="flex wide"><label>LETTER SPACING</label>0.5PX</p>
+        </div>
+    </div>
+    <div class="frame border center" view="default">
+        <label>POWERED BY ARCHETYPE</label>
+    </div>
+    <div class="frame border center" view="with border">
+        <label class="border">POWERED BY ARCHETYPE</label>
+    </div>
+    <div class="frame border center" view="negative">
+        <label class="negative">POWERED BY ARCHETYPE</label>
+    </div>
+</section>
+
+<section data-section="interface" class="divider">
+    <h2>Interface</h2>
+    <div style="margin-left:8px" class="toggle-container off" onclick="switchToggle(this); toggleIcons(this);">
+        <div class="toggle"></div>
+        <label>BUTTON ICONS</label>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>Button</h3>
+        <div class="border">
+            <label class="header">LARGE</label>
+            <p class="flex wide"><label>HEIGHT</label>56PX</p>
+            <p class="flex wide"><label>FONT SIZE</label>16PX</p>
+        </div>
+        <div class="border">
+            <label class="header">DEFAULT</label>
+            <p class="flex wide"><label>HEIGHT</label>48PX</p>
+            <p class="flex wide"><label>FONT SIZE</label>14PX</p>
+        </div>
+        <div class="border">
+            <label class="header">SMALL</label>
+            <p class="flex wide"><label>HEIGHT</label>40PX</p>
+            <p class="flex wide"><label>FONT SIZE</label>12PX</p>
+        </div>
+    </div>
+    <div class="grid" columns="5">
+        <div class="frame flex border thin" view="PRIMARY">
+            <a class="button blue large">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="SECONDARY">
+            <a class="button large">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="DISABLED">
+            <a class="button disabled large">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="TRANSPARENT">
+            <a class="button ghost border large">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="GHOST">
+            <a class="button ghost large">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="PRIMARY">
+            <a class="button blue">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="SECONDARY">
+            <a class="button">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="DISABLED">
+            <a class="button disabled">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="TRANSPARENT">
+            <a class="button ghost border">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="GHOST">
+            <a class="button ghost">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="PRIMARY">
+            <a class="button blue small">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="SECONDARY">
+            <a class="button small">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="DISABLED">
+            <a class="button disabled small">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="TRANSPARENT">
+            <a class="button ghost border small">CLICK</a>
+        </div>
+        <div class="frame flex border thin" view="GHOST">
+            <a class="button ghost small">CLICK</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>Link</h3>
+        <div class="border">
+            <label class="header">DESKTOP</label>
+            <p class="flex wide"><label>FONT SIZE</label>16PX</p>
+        </div>
+        <div class="border">
+            <label class="header">MOBILE</label>
+            <p class="flex wide"><label>FONT SIZE</label>14PX</p>
+        </div>
+    </div>
+    <div class="grid" columns="2">
+        <div class="frame flex border" view="desktop">
+            <a class="link">Read more</a>
+        </div>
+        <div class="frame flex border" view="desktop">
+            <a class="link with-icon">Read more <div class="icon" type="arrow-right"></div></a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>Input</h3>
+        <div class="border">
+            <label class="header">LARGE</label>
+            <p class="flex wide"><label>HEIGHT</label>48PX</p>
+            <p class="flex wide"><label>FONT SIZE</label>18PX</p>
+        </div>
+        <div class="border">
+            <label class="header">DEFAULT</label>
+            <p class="flex wide"><label>HEIGHT</label>40PX</p>
+            <p class="flex wide"><label>FONT SIZE</label>16PX</p>
+        </div>
+    </div>
+    <div class="grid" columns="4">
+        <div class="frame flex border thin" view="default">
+            <input placeholder="Full name"></input>
+        </div>
+        <div class="frame flex border thin" view="with icon">
+            <div class="input-with-icon">
+                <input placeholder="Full name"></input>
+                <div class="icon" type="person"></div>
+            </div>
+        </div>
+        <div class="frame flex border thin" view="disabled">
+            <input disabled value="John Doe"></input>
+        </div>
+        <div class="frame flex border thin" view="disabled with icon">
+            <div class="input-with-icon">
+                <input disabled value="John Doe"></input>
+                <div class="icon" type="person"></div>
+            </div>
+        </div>
+        <div class="frame flex border thin" view="default">
+            <input class="small" placeholder="Full name"></input>
+        </div>
+        <div class="frame flex border thin" view="with icon">
+            <div class="input-with-icon">
+                <input class="small" placeholder="Full name"></input>
+                <div class="icon" type="person"></div>
+            </div>
+        </div>
+        <div class="frame flex border thin" view="disabled">
+            <input class="small" disabled value="John Doe"></input>
+        </div>
+        <div class="frame flex border thin" view="disabled with icon">
+            <div class="input-with-icon">
+                <input class="small" disabled value="John Doe"></input>
+                <div class="icon" type="person"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>Toggle</h3>
+        <div class="border">
+            <p class="flex wide"><label>HEIGHT</label>32PX</p>
+        </div>
+    </div>
+    <div class="frame flex border thin" view="on">
+        <div class="toggle-container on" onclick="switchToggle(this)">
+            <div class="toggle"></div>
+            <label>ALLOW</label>
+        </div>
+    </div>
+    <div class="frame flex border thin" view="off">
+        <div class="toggle-container off" onclick="switchToggle(this)">
+            <div class="toggle"></div>
+            <label>ALLOW</label>
+        </div>
+    </div>
+    <div class="frame flex border thin" view="disabled on">
+        <div class="toggle-container disabled off" onclick="switchToggle(this)">
+            <div class="toggle"></div>
+            <label>ALLOW</label>
+        </div>
+    </div>
+    <div class="frame flex border thin" view="disabled off">
+        <div class="toggle-container disabled on" onclick="switchToggle(this)">
+            <div class="toggle"></div>
+            <label>ALLOW</label>
+        </div>
+    </div>
+</section>
+
+<section data-section="layout" class="divider">
+    <h2>Layout</h2>
+</section>
+
+<section>
+    <div class="frame border" view="desktop">
+        <h1>Next-gen businesses run on Archetype</h1>
+        <div style="height:20px"></div>
+        <h3>Elevate your work and operate faster, smarter and better</h3>
+        <div style="height:20px"></div>
+        <div class="button large blue">GET STARTED</div>
+    </div>
+</section>
+
+<section>
+    <div class="frame border" view="desktop">
+        <label class="border">LEVEL UP YOUR BUSINESS</label>
+        <div style="height:20px"></div>
+        <h2>One platform for all your workflows, powered by AI</h2>
+        <div style="height:20px"></div>
+        <h3>Elevate your work and operate faster, smarter and better</h3>
+        <div style="height:8px"></div>
+        <p>No more juggling between diffrent tools. Keep all your operations within your fully customized workspace, powered by AI.</p>
+        <div style="height:12px"></div>
+        <div class="button blue">SIGN UP</div>
+    </div>
+</section>
+
+<section>
+    <div class="frame border center" view="desktop">
+        <label class="border negative">NEXT-GEN SOFTWARE</label>
+        <div style="height:20px"></div>
+        <h2>Easy and effective</h2>
+        <div style="height:20px"></div>
+        <div class="image border" style="height:300px">ILLUSTRATION</div>
+        <div style="height:20px"></div>
+        <h3>Supercharge your business operations and run your work faster, smarter and better with cutting-edge tools built for you</h3>
+    </div>
+</section>
+
+<section>
+    <div class="frame border" view="desktop">
+        <div class="image border" style="height:200px">ILLUSTRATION</div>
+        <div style="height:20px"></div>
+        <h3>Elevate your work and operate faster, smarter and better</h3>
+        <div style="height:8px"></div>
+        <p>No more juggling between diffrent tools. Keep all your operations within your fully customized workspace, powered by AI.</p>
+        <div style="height:12px"></div>
+        <div class="button">LEARN MORE</div>
+    </div>
+</section>
+
+<section>
+    <div class="frame border" view="desktop">
+        <h2>Frequently asked questions</h2>
+        <div style="height:12px"></div>
+        <p>No more juggling between diffrent tools. Keep all your operations within your fully customized workspace.</p>
+        <div style="height:8px"></div>
+        <div class="accordion border" onclick="accordion(this)">
+            <h3>Why Archetype?</h3>
+            <p>Because we're the best and you can have a romantic dinner instead of answering customer emails.</p>
+        </div>
+        <div class="accordion border" onclick="accordion(this)">
+            <h3>What's in it for me?</h3>
+            <p>A lot! You can finally go touch grass instead of sending order confirmations to your clients one by one.</p>
+        </div>
+        <div class="accordion border" onclick="accordion(this)">
+            <h3>How it works?</h3>
+            <p>You simply tell us about the workflows of your business. Our AI then creates your perfect workspace. Now you can invite your team and get things done!</p>
+        </div>
+        <div style="height:24px"></div>
+        <div class="button small">READ ALL</div>
+    </div>
+</section>
+
+<section>
+    <div class="frame border center" view="desktop">
+        <h2>Get your life back</h2>
+        <div style="height:12px"></div>
+        <p>Elevate your work and operate faster, smarter and better with cutting-edge tools</p>
+        <div style="height:32px"></div>
+        <div class="grid border">
+            <div class="item">
+                <div class="image border" style="height:64px; width:64px">ICON</div>
+                <h3>One</h3><p>Have a romantic dinner instead of answering customer emails</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:64px; width:64px">ICON</div>
+                <h3>Two</h3><p>Touch grass instead of sending order confirmations one by one</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:64px; width:64px">ICON</div>
+                <h3>Three</h3><p>Read the kids a bedtime story instead of nudging Bob to finish that task</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:64px; width:64px">ICON</div>
+                <h3>Four</h3><p>Cook lunch for the fam instead of chasing unpaid invoices</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:64px; width:64px">ICON</div>
+                <h3>Five</h3><p>Learn that piano melody instead of updating spreadsheet rows</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:64px; width:64px">ICON</div>
+                <h3>Six</h3><p>Build some muscle instead of calculating quotes for each of your clients</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="frame border center" view="desktop">
+        <label class="border">BUSINESSES ♡ ARCHETYPE</label>
+        <div style="height:16px"></div>
+        <h2>What the next-gen is saying</h2>
+        <div style="height:32px"></div>
+        <div class="grid border big-items">
+            <div class="item left">
+                <div class="image border" style="height:160px;">PHOTO</div>
+                <p>"I could finally have a romantic dinner instead of answering customer emails"</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:160px;">PHOTO</div>
+                <p>"With Archetype, I can actually go touch some grass instead of sending order confirmations to clients one by one"</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:160px;">PHOTO</div>
+                <p>"I manage to tead the kids a bedtime story every night instead of nudging Bob to finish that task"</p>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:160px;">PHOTO</div>
+               <p>"Thanks to Archetype I'm able to cook lunch for the fam instead of chasing unpaid invoices</p>
+            </div>
+        </div>
+        <div style="height:32px"></div>
+        <a class="link with-icon">Hear more business owners<div class="icon" type="arrow-right"></div></a>
+    </div>
+</section>
+
+<section>
+    <div class="frame border" view="desktop">
+        <div style="height:16px"></div>
+        <h2>Learn from our community of business owners</h2>
+        <p>There's nothing more valuable than experience. We're gathering the top tips, insights, and how-to's from our beloved community and sharing them with you.</p>
+        <div style="height:32px"></div>
+        <div class="grid border big-items">
+            <div class="item left">
+                <div class="image border" style="height:240px;">ILLUSTRATION</div>
+                <h3>Using AI to automate more than you can imagine</h3>
+                <div style="height:16px"></div>
+                <div class="user flex left"><div class="image avatar border"></div>Alice, Brooklyn Bikes</div>
+                <div class="button small">READ ARTICLE</div>
+            </div>
+            <div class="item">
+                <div class="image border" style="height:240px;">ILLUSTRATION</div>
+                <h3>How to onboard your employees on a new platform</h3>
+                <div style="height:16px"></div>
+                <div class="user flex left"><div class="image avatar border"></div>John, Wud Furniture</div>
+                <div class="button small">READ ARTICLE</div>
+            </div>
+        </div>
+        <div style="height:32px"></div>
+        <p>We'd love to feature you! <a class="link">Submit your business</a> and tell us how you run your operations effeciently.</p>
+    </div>
+</section>
+
+<script>
+
+setIcons()
+setMobileViews()
+
+function scrollToSection(element) {
+    section = $('[data-section=' + element + ']');
+    y = section.offset().top + -80;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
+$('.frame').each(function() {
+    if ( $(this).attr('view') != undefined ) {
+        $(this).append('<label class="view">'+$(this).attr('view')+'</label>')
+    }
+})
+
+function setMobileViews() {
+    $('[view=desktop]').each(function() {
+        mobileView = $(this).clone().attr('view','mobile')
+        mobileView.html($(this).html())
+        $(this).after(mobileView)
+    })
+}
+
+function setIcons() {
+    $('.icon').each(function() {
+        $(this).css('background-image','url(../assets/icon-'+$(this).attr('type')+'.png)')
+    })
+}
+
+
+function switchToggle(element) {
+    if ($(element).hasClass('disabled')) {
+        return;
+    }
+    $(element).toggleClass('on off');
+}
+
+function toggleIcons(element) {
+    if ($(element).hasClass('on')) {
+        $('.button').append('<div class="icon" type="arrow-right"></div>')
+        setIcons()
+    } else {
+        $('.button .icon').remove()
+    }
+}
+
+function accordion(element) {
+    $(element).toggleClass('open')
+}
+
+function copy(object) {
+
+    text = $(object).find('label').html()
+
+    $(object).find('.tile').addClass('copied')
+
+    setTimeout(function() { $(object).find('.tile').removeClass('copied') }, 1000);
+
+    input = document.createElement('input');
+    input.setAttribute('value', text);
+    document.body.appendChild(input);
+    input.select();
+    result = document.execCommand('copy');
+    document.body.removeChild(input)
+    return result;
+}
+
+</script>
