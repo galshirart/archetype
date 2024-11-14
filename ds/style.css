@@ -358,9 +358,6 @@ input:disabled:focus + .input-icon {
 .toggle-container.off label {
     opacity:0.7
 }
-.toggle-container.off:hover:not(.disabled) {
-    color:#162CB9;
-}
 .toggle-container.disabled {
     cursor: not-allowed;
     opacity: 0.5;
