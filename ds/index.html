@@ -4,7 +4,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<section class="header-menu flex border left">
+<!-- <section class="header-menu flex border left">
     <div class="logo"></div>
     <h3>Design System</h3>
     <a onclick="scrollToSection('color')">Color</a>
@@ -12,14 +12,15 @@
     <a onclick="scrollToSection('interface')">Interface</a>
     <a onclick="scrollToSection('layout')">Layout</a>
     <a onclick="scrollToSection('illustration')">Illustration</a>
-</section>
+</section> -->
+
+<div class="side-bar">
+    <div class="flex left logo-container"><div class="logo"></div><h3>Design</h3></div>
+</div>
 
 <section data-section="color" class="divider"><h2>Color</h2></section>
 
 <section>
-    <!-- <div class="info">
-        <h3>Primary Palette</h3>
-    </div> -->
     <div class="frame border">
         <div class="color" onclick="copy(this)">
             <p>White</p>
@@ -526,6 +527,23 @@
 
 setIcons()
 setMobileViews()
+setMenu()
+
+function setMenu() {
+    $('.info h3, .divider h2').each(function() {
+        button = $('<div class="button ghost">'+$(this).html()+'</div>')
+
+        if ($(this).is('h3')) {
+            button.addClass('small').css('text-transform','uppercase');
+        }
+
+        button.attr('onclick','window.scrollTo({ top: '+$(this).offset().top + -20+', behavior: "smooth" });')
+
+        $('.side-bar').append(button)
+    })
+
+    $('[data-section=interface]')
+}
 
 function scrollToSection(element) {
     section = $('[data-section=' + element + ']');
