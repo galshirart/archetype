@@ -4,16 +4,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<!-- <section class="header-menu flex border left">
-    <div class="logo"></div>
-    <h3>Design System</h3>
-    <a onclick="scrollToSection('color')">Color</a>
-    <a onclick="scrollToSection('typography')">Typography</a>
-    <a onclick="scrollToSection('interface')">Interface</a>
-    <a onclick="scrollToSection('layout')">Layout</a>
-    <a onclick="scrollToSection('illustration')">Illustration</a>
-</section> -->
-
 <div class="side-bar">
     <div class="flex left logo-container"><div class="logo"></div><h3>Design</h3></div>
 </div>
@@ -174,15 +164,15 @@
 
 <section data-section="interface" class="divider">
     <h2>Interface</h2>
-    <div style="margin-left:8px" class="toggle-container off" onclick="switchToggle(this); toggleIcons(this);">
-        <div class="toggle"></div>
-        <label>BUTTON ICONS</label>
-    </div>
 </section>
 
 <section>
     <div class="info">
         <h3>Button</h3>
+        <div class="toggle-container off" onclick="switchToggle(this); toggleIcons(this);">
+            <div class="toggle"></div>
+            <label>ICONS</label>
+        </div>
         <div class="border">
             <label class="header">LARGE</label>
             <p class="flex wide"><label>HEIGHT</label>56PX</p>
@@ -273,6 +263,10 @@
 <section>
     <div class="info">
         <h3>Input</h3>
+        <div class="toggle-container off" onclick="switchToggle(this); toggleInputLabels(this);">
+            <div class="toggle"></div>
+            <label>LABELS</label>
+        </div>
         <div class="border">
             <label class="header">LARGE</label>
             <p class="flex wide"><label>HEIGHT</label>48PX</p>
@@ -285,37 +279,45 @@
         </div>
     </div>
     <div class="grid" columns="4">
-        <div class="frame flex border thin" view="default">
+        <div class="frame flex border thin vertical" view="default">
+            <p class="input-label hide">Full name</p>
             <input placeholder="Full name"></input>
         </div>
-        <div class="frame flex border thin" view="with icon">
+        <div class="frame flex border thin vertical" view="with icon">
+            <p class="input-label hide">Full name</p>
             <div class="input-with-icon">
                 <input placeholder="Full name"></input>
                 <div class="icon" type="person"></div>
             </div>
         </div>
-        <div class="frame flex border thin" view="disabled">
+        <div class="frame flex border thin vertical" view="disabled">
+            <p class="input-label hide">Full name</p>
             <input disabled value="John Doe"></input>
         </div>
-        <div class="frame flex border thin" view="disabled with icon">
+        <div class="frame flex border thin vertical" view="disabled with icon">
+            <p class="input-label hide">Full name</p>
             <div class="input-with-icon">
                 <input disabled value="John Doe"></input>
                 <div class="icon" type="person"></div>
             </div>
         </div>
-        <div class="frame flex border thin" view="default">
+        <div class="frame flex border thin vertical" view="default">
+            <p class="input-label hide">Full name</p>
             <input class="small" placeholder="Full name"></input>
         </div>
-        <div class="frame flex border thin" view="with icon">
+        <div class="frame flex border thin vertical" view="with icon">
+            <p class="input-label hide">Full name</p>
             <div class="input-with-icon">
                 <input class="small" placeholder="Full name"></input>
                 <div class="icon" type="person"></div>
             </div>
         </div>
-        <div class="frame flex border thin" view="disabled">
+        <div class="frame flex border thin vertical" view="disabled">
+            <p class="input-label hide">Full name</p>
             <input class="small" disabled value="John Doe"></input>
         </div>
-        <div class="frame flex border thin" view="disabled with icon">
+        <div class="frame flex border thin vertical" view="disabled with icon">
+            <p class="input-label hide">Full name</p>
             <div class="input-with-icon">
                 <input class="small" disabled value="John Doe"></input>
                 <div class="icon" type="person"></div>
@@ -581,10 +583,21 @@ function switchToggle(element) {
 
 function toggleIcons(element) {
     if ($(element).hasClass('on')) {
-        $('.button').append('<div class="icon" type="arrow-right"></div>')
+        $('.frame .button').append('<div class="icon" type="arrow-right"></div>')
         setIcons()
     } else {
-        $('.button .icon').remove()
+        $('.frame .button .icon').remove()
+    }
+}
+
+function toggleInputLabels(element) {
+    if ($(element).hasClass('on')) {
+        $('input').parents('.frame').find('.input-label').show()
+        $('input').attr('placeholder','Type here')
+        setIcons()
+    } else {
+        $('input').parents('.frame').find('.input-label').hide()
+        $('input').attr('placeholder','Full name')
     }
 }
 
