@@ -486,20 +486,20 @@ badge {
     border:1px solid rgba(22, 44, 185, 0.2);
     font-size:14px;
 }
-badge.lilac { background:#d9d9ff } 
-badge.purple { background:#ecd8ff } 
-badge.pink { background:#ffb3d4 } 
-badge.red { background:#ffb3b3 } 
-badge.orange { background:#ffb899 } 
-badge.brown { background:#d9c7b3 } 
-badge.yellow { background:#ffe699 } 
-badge.lime { background:#d4d999 } 
-badge.sage { background:#cce0cc } 
-badge.green { background:#cce5d8 } 
-badge.emerald { background:#c9e0d6 } 
-badge.teal { background:#cce5e6 } 
-badge.blue { background:#d8ebff } 
-badge.grey { background:#d4d4d4 } 
+badge.lilac { background:hsl(232 100% 94%) } 
+badge.purple { background:hsl(279 100% 94%) } 
+badge.pink { background:hsl(0 100% 94%) } 
+badge.red { background:hsl(0 100% 94%) } 
+badge.orange { background:hsl(23 100% 92%) } 
+badge.brown { background:hsl(29 49% 90%) } 
+badge.yellow { background:hsl(43 100% 91%) } 
+badge.lime { background:hsl(60 57% 88%) } 
+badge.sage { background:hsl(84 42% 89%) } 
+badge.green { background:hsl(128 56% 88%) } 
+badge.emerald { background:hsl(162 56% 86%) } 
+badge.teal { background:hsl(186 73% 88%) } 
+badge.blue { background:hsl(208 100% 92%) } 
+badge.grey { background:hsl(0 0% 93%) } 
 badge span {
     opacity:0.7
 }
