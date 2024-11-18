@@ -189,7 +189,7 @@
             <p class="flex wide"><label>FONT SIZE</label>12PX</p>
         </div>
     </div>
-    <div class="grid" columns="5">
+    <div class="grid buttons" columns="5">
         <div class="frame flex border thin" view="PRIMARY">
             <a class="button blue large">CLICK</a>
         </div>
@@ -307,9 +307,6 @@
 <section>
     <div class="info">
         <h3>Toggle</h3>
-        <div class="border">
-            <p class="flex wide"><label>HEIGHT</label>26PX</p>
-        </div>
     </div>
     <div class="frame flex border thin" view="on">
         <div class="toggle-container on" onclick="switchToggle(this)">
@@ -356,6 +353,86 @@
         <div class="frame flex border" view="desktop">
             <a class="link with-icon">Read more <div class="icon" type="arrow-right"></div></a>
         </div>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>Badge</h3>
+    </div>
+    <div class="frame flex border badges">
+        <badge class="lilac"><span>Lilac</span></badge>
+        <badge class="purple"><span>Purple</span></badge>
+        <badge class="pink"><span>Pink</span></badge>
+        <badge class="red"><span>Red</span></badge>
+        <badge class="orange"><span>Orange</span></badge>
+        <badge class="brown"><span>Brown</span></badge>
+        <badge class="yellow"><span>Yellow</span></badge>
+        <badge class="lime"><span>Lime</span></badge>
+        <badge class="sage"><span>Sage</span></badge>
+        <badge class="green"><span>Green</span></badge>
+        <badge class="emerald"><span>Emerald</span></badge>
+        <badge class="lilac"><span>Lilac</span></badge>
+        <badge class="teal"><span>Teal</span></badge>
+        <badge class="neutral"><span>Neutral</span></badge>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h3>Table</h3>
+    </div>
+    <div class="frame flex border">
+            <table>
+                <tr class="head">
+                    <td>Number</td>
+                    <td>Product</td>
+                    <td>Status</td>
+                    <td>Customer</td>
+                    <td>Value</td>
+                    <td>Actions</td>
+                </tr>
+                <tr>
+                    <td><label class="border">126</label></td>
+                    <td>Speedster 3000</td>
+                    <td><badge class="yellow"><span>Received</span></badge></td>
+                    <td><a class="link">John Mitchell</a></td>
+                    <td>$1,299</td>
+                    <td><div class="button small blue">APPROVE</div><div class="button small">REJECT</div><div class="button small ghost border">MORE</div></td>
+                </tr>
+                <tr>
+                    <td><label class="border">125</label></td>
+                    <td>Urban Glide V6</td>
+                    <td><badge class="blue"><span>Processing</span></badge></td>
+                    <td><a class="link">Emily Carter</a></td>
+                    <td>$3,599</td>
+                    <td><div class="button small">CANCEL</div><div class="button small ghost border">MORE</div></td>
+                </tr>
+                <tr>
+                    <td><label class="border">124</label></td>
+                    <td>Mountain Maverick</td>
+                    <td><badge class="green"><span>Shipped</span></badge></td>
+                    <td><a class="link">Michael Adams</a></td>
+                    <td>$4,999</td>
+                    <td><div class="button small ghost border">ARCHIVE</div><div class="button small ghost border">MORE</div></td>
+                </tr>
+                <tr>
+                    <td><label class="border">123</label></td>
+                    <td>Trail Blazer</td>
+                    <td><badge class="green"><span>Shipped</span></badge></td>
+                    <td><a class="link">Olivia Foster</a></td>
+                    <td>$1,299</td>
+                    <td><div class="button small ghost border">ARCHIVE</div><div class="button small ghost border">MORE</div></td>
+                </tr>
+                <tr>
+                    <td><label class="border">122</label></td>
+                    <td>Mountain Maverick</td>
+                    <td><badge class="green"><span>Shipped</span></badge></td>
+                    <td><a class="link">James Parker</a></td>
+                    <td>$4,999</td>
+                    <td><div class="button small ghost border">ARCHIVE</div><div class="button small ghost border">MORE</div></td>
+                </tr>
+            </table>
     </div>
 </section>
 
@@ -583,10 +660,10 @@ function switchToggle(element) {
 
 function toggleIcons(element) {
     if ($(element).hasClass('on')) {
-        $('.frame .button').append('<div class="icon" type="arrow-right"></div>')
+        $('.grid.buttons .button').append('<div class="icon" type="arrow-right"></div>')
         setIcons()
     } else {
-        $('.frame .button .icon').remove()
+        $('.grid.buttons .button .icon').remove()
     }
 }
 
