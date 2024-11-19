@@ -184,6 +184,9 @@ label.negative {
 .button:active .icon {
     margin-top:1px;
 }
+.button.transparent {
+    background-color:transparent
+}
 .button.ghost {
     background-color:transparent;
     border:0;
@@ -198,9 +201,6 @@ label.negative {
 }
 .button.ghost.small{
     line-height:32px;
-}
-.button.ghost.border {
-    border:1px solid #162CB9;
 }
 .button.blue {
     background: #2E42C0;
