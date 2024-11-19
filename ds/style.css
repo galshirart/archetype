@@ -486,6 +486,11 @@ badge {
     border:1px solid rgba(22, 44, 185, 0.2);
     font-size:14px;
 }
+badge.extra-small {
+    height:24px;
+    padding:0 8px;
+    line-height:23px;
+}
 badge.lilac { background:hsl(232 100% 94%) } 
 badge.purple { background:hsl(279 100% 94%) } 
 badge.pink { background:hsl(0 100% 94%) } 
@@ -750,5 +755,5 @@ section > .grid {
     border-radius:100%;
 }
 .badges badge {
-    margin-right:4px;
+    margin:4px;
 }
