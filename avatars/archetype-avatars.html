@@ -1,0 +1,182 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<style>
+body {
+	font-family: 'Arial';
+	font-size:14px;
+	background:#F7F5EF;
+
+}
+.avatar {
+	border-radius:100%;
+	display: inline-block;
+	margin:10px;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	cursor: pointer;
+	border:1px solid #162CB9;
+	transition: all .2s;
+	cursor: pointer;
+}
+.avatar > * {
+	position: absolute;
+	width:100%;
+}
+.avatar:hover {
+	transform: scale(1.2);
+}
+.container {
+	max-width:800px;
+	margin:0 auto;
+	margin:80px auto;
+}
+.container.xs .avatar {
+	width:24px;
+	height:24px;
+}
+.container.s .avatar {
+	width:28px;
+	height:28px;
+}
+.container.md .avatar {
+	width:44px;
+	height:44px;
+	border-width: 2px;
+}
+.container.lg .avatar {
+	width:56px;
+	height:56px;
+	border-width: 2.5px;
+}
+.container.xl .avatar {
+	width:72px;
+	height:72px;
+	border-width: 3px;
+}
+.user {
+	display: flex;
+	align-items: center;
+}
+.user .avatar {
+	margin-right:8px;
+}
+
+</style>
+
+<div class="container xs">
+	<p>24PX</p>
+	<div class="user"></div>
+	<div class="user"></div>
+	<div class="user"></div>
+	<div class="user"></div>
+	<div class="user"></div>
+	<p style="border-top:1px solid #ececec"></p>
+</div>
+
+
+
+<div class="container s">
+	<p>28PX</p>
+</div>
+
+<div class="container md">
+	<p>44PX</p>
+</div>
+
+<div class="container lg">
+	<p>56PX</p>
+</div>
+
+<div class="container xl">
+	<p>68PX</p>
+</div>
+
+<script>
+
+$('.user').each(function() {
+	$(this).append(createAvatar)
+	$(this).append(getRandomName())
+})
+
+i = 1
+while (i <= 54) {
+	$('.container.xs').append(createAvatar())
+	i++
+}
+
+i = 1
+while (i <= 48) {
+	$('.container.s').append(createAvatar())
+	i++
+}
+
+i = 1
+while (i <= 24) {
+	$('.container.md').append(createAvatar())
+	i++
+}
+
+i = 1
+while (i <= 20) {
+	$('.container.lg').append(createAvatar())
+	i++
+}
+
+i = 1
+while (i <= 16) {
+	$('.container.xl').append(createAvatar())
+	i++
+}
+
+
+function createAvatar() {
+	avatar = $("<div class='avatar'></div>");
+
+	bg = random(1,5)
+	body = random(1,24)
+	head = random(1,32)
+	eyes = random(1,8)
+
+	avatar.append("<img src='assets/bg-"+bg+".png' />")
+	avatar.append("<img src='assets/body-"+body+".png' />")
+	avatar.append("<img src='assets/head-"+head+".png' />")
+	avatar.append("<img src='assets/eyes-"+eyes+".png' />")
+
+	return avatar
+}
+
+
+
+function random(min,max) {
+	return Math.floor(Math.random() * (max + 1 - min) + min);
+}
+
+function getRandomName() {
+  const americanFullNames = [
+    "James Smith", "Mary Johnson", "John Williams", "Patricia Brown", "Robert Jones", "Jennifer Garcia", 
+    "Michael Miller", "Linda Davis", "William Martinez", "Elizabeth Rodriguez", "David Hernandez", "Barbara Wilson", 
+    "Richard Anderson", "Susan Thomas", "Joseph Taylor", "Jessica Moore", "Thomas Jackson", "Sarah Martin", 
+    "Charles Lee", "Karen Perez", "Christopher Thompson", "Nancy White", "Daniel Harris", "Lisa Clark", 
+    "Matthew Lewis", "Betty Walker", "Anthony Hall", "Margaret Allen", "Mark Young", "Sandra King", 
+    "Donald Wright", "Ashley Scott", "Steven Torres", "Kimberly Nguyen", "Paul Hill", "Emily Green", 
+    "Andrew Adams", "Jessica Baker", "Brian Gonzalez", "Michelle Nelson", "Kevin Carter", "Laura Mitchell", 
+    "Jason Perez", "Sophia Roberts", "Timothy Evans", "Amanda Turner", "Ryan Phillips", "Angela Campbell", 
+    "Eric Parker", "Melissa Edwards", "Stephen Collins", "Nicole Stewart", "Jeffrey Morris", "Rachel Flores", 
+    "Joshua Sanders", "Laura Butler", "Gregory Ramirez", "Megan Wood", "Matthew Peterson", "Hannah Bell", 
+    "Jonathan Gray", "Amy Cooper", "Justin Richardson", "Anna Cox", "Patrick Howard", "Julia Ward", 
+    "Alexander Brooks", "Kelly Powell", "Jacob Watson", "Diane Russell", "Zachary Barnes", "Catherine Bryant", 
+    "Brandon Fisher", "Victoria Simmons", "Tyler Bennett", "Maria Foster", "Nathan Reed", "Heather Ross", 
+    "Jeremy Long", "Megan Perry", "Aaron Jenkins", "Christina Coleman", "Ethan Sanders", "Stephanie Ford", 
+    "Samuel Cooper", "Katherine Bailey", "Jack Murphy", "Rebecca Rivera", "Henry Kelly", "Grace Kim", 
+    "Adam Hayes", "Brittany Bell", "Austin Sanders", "Samantha Ramirez", "Evelyn Myers", "Benjamin Price", 
+    "Olivia Alexander", "Emma Stewart", "Jacob Wallace"
+  ];
+
+  const randomIndex = Math.floor(Math.random() * americanFullNames.length);
+  return americanFullNames[randomIndex];
+}
+
+
+</script>
