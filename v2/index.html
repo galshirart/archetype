@@ -1,0 +1,185 @@
+<title>Archetype - Supercharge Your Work</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="style.css?4" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<div class="header flex">
+    <a href="#"><img class="logo" src="assets/archetype-logo.svg" /></a>
+    <div class="menu flex">
+        <a href="#" class="button ghost current" data-page="home">Home</a>
+        <a href="#" class="button ghost" data-page="blog">Blog</a>
+        <a href="#" class="button ghost" data-page="about">About <span class="tooltip"><label>WE'RE HIRING!</label></span></a>
+        <a href="#" class="button ghost" data-page="contact">Contact</a>
+        <a href="#" class="button login">LOGIN</a>
+        <a href="#" class="button blue hide pop">GET STARTED</a>
+        <div class="button ghost hamburger"></div>
+    </div>
+</div>
+
+<div class="shapes-container">
+    <div class="shapes">
+        <video shape="a" autoplay="" loop="" muted="" playsinline="">
+            <source src="assets/all.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<section section="a">
+    <h1>AI that actually<br> gets your business</h1>
+    <h3>Supercharge your business with a customizable platform that thinks, organizes and acts like you would.</h3>
+    <a href="#" class="button blue main">REQUEST ACCESS</a><span style="margin-right:16px"></span><a href="#" class="button learnmore">LEARN MORE</a>
+    <div class="cards visual" style="margin-top:50px" focus="true"></div>
+</section>
+
+<section section="b">
+    <h2>Put your inbox<br>to work</h2>
+    <h3>Our next-gen AI scans your mail, captures what matters, and takes action before you even look.</h3>
+    <a href="#"><div class="button blue icon"><img src="assets/play-icon.svg" /></div>Watch us process leads within seconds</a>
+    <div class="visual">
+        <div class="blur"></div>
+        <img class="main" src="assets/visual-b.png">
+    </div>
+</section>
+
+<section section="c">
+    <h2>Your business, <br>your rules</h2>
+    <h3>Our platform adapts to your unique way of working, creating a system that's truly built around your business.</h3>
+    <a href="#"><div class="button blue icon"><img src="assets/play-icon.svg" /></div>Watch us build a custom onboarding flow</a>
+    <div class="visual">
+        <img class="main" src="assets/visual-c.png">
+    </div>
+</section>
+
+<section section="d">
+    <h2>Supercharge<br> your team</h2>
+    <h3>AI tackles the routine, you focus on what matters. Stay in control while AI amplifies what your team can achieve.</h3>
+    <a href="#"><div class="button blue icon"><img src="assets/play-icon.svg" /></div>Watch us instruct AI on handling customer requests</a>
+    <div class="visual">
+        <img class="main" src="assets/visual-d.png">
+    </div>
+</section>
+
+<section section="e">
+    <h2>Business owners<br> love Archetype</h2>
+    <h3>Join us and supercharge your business with AI</h3>
+    <a href="#" class="button blue main">REQUEST ACCESS</a>
+    <div class="visual">
+        <div class="blur"></div>
+        <img class="main" src="assets/visual-e.png">
+        <div class="arrows"><img class="arrow left" src="assets/arrow.svg"></img><img class="arrow right" src="assets/arrow.svg"></img></div>
+    </div>
+</section>
+
+<section class="footer">
+    <a href="#"><img class="logo" src="assets/archetype-logo-white.svg" /></a>
+    <p>© 2025 Archetype, Inc. All rights reserved.</p>
+</section>
+
+
+<script>
+
+document.addEventListener('scroll', function() {
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    const sections = ['a', 'b', 'c', 'd', 'e'];
+    let currentSection = 'a';
+
+    sections.forEach(section => {
+        const offsetTop = $(`section[section='${section}']`).offset().top;
+        if (scrollTop > offsetTop - window.innerHeight / 2) {
+            currentSection = section;
+        }
+    });
+
+    $('.shapes video').attr('shape', currentSection);
+    $('.visual').attr('focus', 'false');
+    $(`[section='${currentSection}'] .visual`).attr('focus', 'true');
+
+    scrollThroughSection = window.pageYOffset || document.documentElement.scrollTop;
+
+    $('section').each(function() {
+        scrollThroughSection = scrollTop - $(this).offset().top
+        scrollThroughSection = scrollThroughSection / window.innerHeight * 100
+        $(this).find('.visual').css({
+            'margin-top': -scrollThroughSection+'px',
+        })
+    });
+});
+
+cards = [
+    'Detected new lead from inbox',
+    'Calculated total cost',
+    'Categorized incoming lead',
+    'Set status to active',
+    'Marked lead as high value',
+    'Calculated profit margin',
+    'Sent quote to customer',
+    'Received customer approval',
+    'Replied to customer ticket',
+    'Changed order status',
+    'Sent a follow-up to a lead',
+    'Sent an order confirmation',
+    'Issued a refund',
+    'Updated customer details',
+    'Updated quote information',
+    'Generated client agreement',
+    'Generated daily report',
+    'Scheduled client meeting',
+    'Analyzed customer feedback',
+    'Detected overdue invoices',
+    'Monitored team performance',
+    'Optimized inventory levels',
+    'Identified high-value customers',
+    'Generated invoice'
+]
+
+placeCard()
+
+function placeCard() {
+    const randomIndex = Math.floor(Math.random() * cards.length);
+    const randomCard = cards[randomIndex];
+
+    card = $('<div class="card"></div>')
+    typeWriterEffect(card[0], randomCard)
+    card.css('margin-top',random(-150,150)+'px')
+
+    $('.visual.cards').append(card)
+
+    setTimeout(function(card) {
+        $(card).prepend('<span class="checkmark"></span>')
+    }, 1000, card)
+
+    setTimeout(function(card) {
+        $(card).remove()
+    }, 6000, card)
+
+    setTimeout(function() {
+        placeCard()
+    }, 2000)
+}
+
+function typeWriterEffect(element, text, speed = 20) {
+    let i = 0;
+    element.innerHTML = '';
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
+$('.learnmore').on('click', function() {
+    $('[section=b]')[0].scrollIntoView({ behavior: 'smooth' });
+});
+
+
+
+function random(min,max) {
+	return Math.floor(Math.random() * (max + 1 - min) + min);
+}
+
+
+</script>
