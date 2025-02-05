@@ -56,6 +56,7 @@ a {
     text-align: center;
     height:48px;
     line-height:46px;
+    font-weight:500;
     padding:0 22px;
     background-color:white;
     border:1px solid #162CB9;
@@ -67,7 +68,7 @@ a {
     transition: all .1s, margin 400ms;
     cursor: pointer;
     min-width:48px;
-    width:fit-content
+    width:fit-content;
 }
 .button:after {
     display: block;
@@ -98,6 +99,7 @@ a {
     letter-spacing: 0;
     font-size:15px;
     overflow: visible;
+    font-weight:400;
 }
 .button.ghost:after {
     border:0;
@@ -251,6 +253,10 @@ section {
     max-width:1400px;
     margin:0 auto;
 }
+.content {
+    z-index: 2;
+    position: absolute;
+}
 .shapes-container {
     position: fixed;
     max-width:1400px;
@@ -309,7 +315,6 @@ video[shape=e]  {
     opacity: 0;
     transition: opacity .6s;
     z-index: 0;
-    pointer-events: none;
     transform: matrix(1, 0.10, 0, 1, 0, 0);
 }
 .visual[focus=true]  {
