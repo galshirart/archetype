@@ -30,7 +30,7 @@
         <h3>Supercharge your business with a customizable platform that thinks, organizes and acts like you would.</h3>
         <a href="#" class="button blue main">REQUEST ACCESS</a><span style="margin-right:16px"></span><a href="#" class="button learnmore">LEARN MORE</a>
     </div>
-    <div class="cards visual" style="margin-top:50px" focus="true"></div>
+    <div class="cards visual" focus="true"></div>
 </section>
 
 <section section="b">
@@ -111,7 +111,7 @@ document.addEventListener('scroll', function() {
         scrollThroughSection = scrollTop - $(this).offset().top
         scrollThroughSection = scrollThroughSection / window.innerHeight * 100
         $(this).find('.visual').css({
-            'margin-top': -scrollThroughSection+'px',
+            'margin-top': -100-scrollThroughSection*4+'px',
         })
     });
 });
@@ -151,7 +151,7 @@ function placeCard() {
 
     card = $('<div class="card"></div>')
     typeWriterEffect(card[0], randomCard)
-    card.css('margin-top',random(-150,150)+'px')
+    card.css('margin-top',random(-50,200)+'px')
 
     $('.visual.cards').append(card)
 
