@@ -1,0 +1,333 @@
+<title>Archetype - Supercharge Your Work</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="style.css?4" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<div class="wrap border-left border-right">
+
+<div class="header flex border-bottom border-top">
+    <div class="menu flex">
+        <div class="button ghost hamburger"></div>
+
+        <a href="#" class="button ghost" data-page="blog">Blog</a>
+        <a href="#" class="button ghost" data-page="about">About <span class="tooltip"><label>WE'RE HIRING!</label></span></a>
+        <a href="#" class="button ghost" data-page="contact">Contact</a>
+    </div>
+    <a href="#"><img class="logo" src="assets/archetype-symbol.svg" height="64px"/></a>
+    <div class="flex">
+        <a href="#" class="button login">LOGIN</a>
+    </div>
+</div>
+
+<section class="flex">
+    <div class="left">
+        <h1>AI that actually <br>lets you do more</h1>
+        <p class="subtitle">Supercharge your business with a customizable platform that thinks, organizes and acts like you would.</p>
+        <a href="#" class="button blue hide pop">REQUEST ACCESS</a>
+        <span style="margin-right:4px"></span>
+        <a href="#" class="button login">LEARN MORE</a>
+    </div>
+    <div class="right">
+        <div class="visual cards">
+            <video class="shapes" shape="a" autoplay="" loop="" muted="" playsinline="">
+                <source src="assets/all.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="shadow"></div>
+</section>
+
+<section class="narrow border-top">
+    <div class="shadow"></div>
+    <p class="subtitle narrow"><img src="assets/icon-video.svg" style="margin-right:6px"/>Free 30m consultation <label class="fill">FEW SPOTS LEFT</label></p>
+    <p>Talk to founders and learn how to supercharge your business with AI.</p>
+    <a href="#" class="link"><b>Schedule a call</b></a>
+</section>
+
+<section class="narrow border-top flex no-padding">
+    <div class="stat border-right">
+        <h3>3.4k</h3>
+        <p>Unique workflows run on Archetype</p>
+    </div>
+    <div class="stat border-right">
+        <h3>52k</h3>
+        <p>Actions performed in Archetype</p>
+    </div>
+    <div class="stat">
+        <h3 class="blue">84k</h3>
+        <p>Tasks completed by AI</p>
+    </div>
+</section>
+
+<section class="flex border-top">
+    <div class="left">
+        <h2>Put your inbox <br>to work</h2>
+        <p class="subtitle">Our next-gen AI scans your mail, captures what matters, and takes action before you even look.</p>
+        <p><a href="#" class="button blue icon"><img src="assets/play-icon.svg"></a><b>Watch: </b>Capturing and processing leads from your inbox</p>
+    </div>
+    <div class="right">
+        <video class="playWhenInViewport" muted="" playsinline="">
+            <source src="assets/video-1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="shadow"></div>
+</section>
+
+<section class="flex border-top">
+    <div class="left">
+        <h2>Your business, <br>your rules</h2>
+        <p class="subtitle">Our platform adapts to your unique way of working, creating a system that's truly built around your business.</p>
+        <div class="checklist">
+            <div>Easy as Lego</div>
+            <div>Fully custom workflows</div>
+            <div>Role assignments</div>
+            <div>Automations by AI</div>
+        </div>
+        <p><a href="#" class="button blue icon"><img src="assets/play-icon.svg"></a><b>Watch: </b>Capturing and processing leads from your inbox</p>
+    </div>
+    <div class="right">
+        <video class="playWhenInViewport" muted="" playsinline="">
+            <source src="assets/video-2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="shadow"></div>
+</section>
+
+<section class="black">
+    <h3></h3>
+</section>
+
+<section class="flex border-bottom">
+    <div class="left">
+        <h2>Supercharge <br>your team</h2>
+        <p class="subtitle">AI tackles the routine, you focus on what matters. Stay in control while AI amplifies what your team can achieve.</p>
+        <p><a href="#" class="button blue icon"><img src="assets/play-icon.svg"></a><b>Watch: </b>Instructing AI on handling customer requests</p>
+    </div>
+    <div class="right">
+        <video class="playWhenInViewport" muted="" playsinline="">
+            <source src="assets/video-2.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+</div>
+<script>
+cards = [
+    'Detect new lead from inbox',
+    'Calculate total cost',
+    'Categorize incoming lead', 
+    'Set status to active',
+    'Mark lead as high value',
+    'Calculate profit margin',
+    'Send quote to customer',
+    'Receive customer approval',
+    'Reply to customer ticket',
+    'Change order status',
+    'Send a follow-up to a lead',
+    'Send an order confirmation',
+    'Issue a refund',
+    'Update customer details',
+    'Update quote information',
+    'Generate client agreement',
+    'Generate daily report',
+    'Schedule client meeting',
+    'Analyze customer feedback',
+    'Detect overdue invoices',
+    'Monitor team performance',
+    'Optimize inventory levels',
+    'Identify high-value customers',
+    'Generate invoice',
+]
+
+placeCard()
+
+function placeCard() {
+    const randomIndex = Math.floor(Math.random() * cards.length);
+    const randomCard = cards[randomIndex];
+
+    card = $('<div class="card"><span class="checkmark"></span></div>')
+    typeWriterEffect(card[0], randomCard)
+    $(card).prepend('<span class="bullet"></span>')
+    card.css('margin-top',random(-150,100)+'px')
+
+    $('.visual.cards').append(card)
+
+    setTimeout(function(card) {
+        $(card).addClass('done')
+    }, 1000, card)
+
+    setTimeout(function(card) {
+        $(card).remove()
+    }, 6000, card)
+
+    setTimeout(function() {
+        placeCard()
+    }, 2000)
+}
+
+function typeWriterEffect(element, text, speed = 20) {
+    let i = 0;
+    element.innerHTML = '';
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function animateNumber(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    function updateNumber() {
+        current += increment;
+        if (current >= target) {
+            element.textContent = Math.round(target)+'k';
+            return;
+        }
+        element.textContent = Math.round(current)+'k';
+        requestAnimationFrame(updateNumber);
+    }
+    
+    updateNumber();
+}
+
+function handleStatAnimation() {
+    $('.stat h3').each(function() {
+        if (isElementInViewport(this) && !this.hasAttribute('data-animated')) {
+            const targetNumber = parseInt(this.textContent);
+            this.setAttribute('data-animated', 'true');
+            this.textContent = '0';
+            animateNumber(this, targetNumber);
+        }
+    });
+}
+
+function handleVideoPlayback() {
+    const videos = document.querySelectorAll('video.playWhenInViewport');
+    
+    videos.forEach(video => {
+        if (!video.hasAttribute('data-played') && isElementInViewport(video) && video.paused) {
+            video.play();
+            video.setAttribute('data-played', 'true');
+        }
+    });
+}
+
+function handleSectionAnimation() {
+
+    $('section .left').children().each(function() {
+        index=0
+        if (isElementInViewport(this) && !this.hasAttribute('data-animated')) {
+            setTimeout(() => {
+                $(this).css({
+                    opacity: 1,
+                    transform: 'translateY(0)',
+                    transition: 'opacity 800ms, transform 800ms'
+                });
+                this.setAttribute('data-animated', 'true');
+            }, $(this).index()*150 );
+        }
+    });
+}
+
+handleSectionAnimation();
+handleStatAnimation();
+['scroll', 'ready'].forEach(event => {
+    $(window).on(event, handleStatAnimation);
+    $(window).on(event, handleVideoPlayback); 
+    $(window).on(event, handleSectionAnimation);
+    $(window).on(event, handleTypewriterAnimation);
+});
+
+function handleTypewriterAnimation() {
+    const blackSection = document.querySelector('section.black h3');
+    const text = "Your business isn't a template. Why should your tech be? Big players get custom solutions, while you're stuck with clunky, one-size-fits-none tools. That's why we bring enterprise-grade power to small business.";
+    
+    if (isElementInViewport(blackSection) && !blackSection.hasAttribute('data-animated')) {
+        blackSection.setAttribute('data-animated', 'true');
+        blackSection.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                blackSection.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 30);
+            }
+        }
+        typeWriter();
+    }
+}
+
+
+// Handle ripple effect on black section hover
+let lastCircleTime = 0;
+$('section.black').on('mousemove', function(e) {
+    const now = Date.now();
+    if (now - lastCircleTime < 100) return;
+    lastCircleTime = now;
+
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const circle = document.createElement('div');
+    circle.style.cssText = `
+        position: absolute;
+        left: ${x}px;
+        top: ${y}px;
+        width: 2px;
+        height: 2px;
+        z-index: 0;
+        border: 1px solid #162CB9;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+    `;
+    
+    this.appendChild(circle);
+
+    size = random(500,1000);
+
+    // Animate and remove
+    $(circle).animate({
+        width: size+'px',
+        height: size+'px',
+        opacity: 0
+    }, {
+        duration: 10000,
+        easing: 'linear',
+        complete: function() {
+            circle.remove();
+        }
+    });
+});
+
+
+$('.learnmore').on('click', function() {
+    $('[section=b]')[0].scrollIntoView({ behavior: 'smooth' });
+});
+
+
+function random(min,max) {
+	return Math.floor(Math.random() * (max + 1 - min) + min);
+}
+
+
+</script>
