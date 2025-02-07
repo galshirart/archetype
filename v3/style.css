@@ -171,6 +171,9 @@ label.fill {
     position: relative;
     top:-2px;
 }
+.grey {
+    color:rgba(0,0,0,0.5)
+}
 .border-top {
     border-top: 1px solid rgba(22, 44, 185, 0.1);
 }
