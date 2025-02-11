@@ -462,6 +462,10 @@ section.black h3 {
     padding:24px;
     border-radius: 8px;
     width:32%;
+    transition: all 500ms;
+}
+.testimonials .item:hover {
+    transform:translateY(-8px)
 }
 .person {
     justify-content: left;
@@ -476,6 +480,30 @@ section.black h3 {
 }
 .item p.subtitle {
     margin:0
+}
+.arrows {
+    justify-content: space-around;
+    width:fit-content;
+    margin:0 auto;
+    margin-top:20px;
+}
+.arrow {
+    width:32px;
+}
+.arrow {
+    margin-right:16px;
+    margin-top:16px;
+    opacity:0.5;
+    cursor:pointer;
+}
+.arrow.prev { 
+    transform:rotate(90deg)
+}
+.arrow.next { 
+    transform:rotate(-90deg)
+}
+.arrow:hover {
+    opacity:1
 }
 section .grid {
     display: grid;
