@@ -112,6 +112,102 @@
     </div>
 </section>
 
+<section class="border-bottom">
+        <div class="shadow"></div>
+        <div class="shadow big"></div>
+        <h2>What our users say</h2>
+        <div class="testimonials flex">
+            <div class="item glass">
+                <div class="person flex">
+                    <div class="avatar"></div>
+                    <div><p>John Doe</p><label>WUD FURNITURE</label></div>
+                </div>
+                <p class="subtitle">Archetype organized all our workflows and we even automated some of the steps! We can finally focus on growing the business instead of drowning in chaos.</p>
+            </div>
+            <div class="item glass">
+                <div class="person flex">
+                    <div class="avatar"></div>
+                    <div><p>John Doe</p><label>WUD FURNITURE</label></div>
+                </div>
+                <p class="subtitle">Archetype organized all our workflows and we even automated some of the steps! We can finally focus on growing the business instead of drowning in chaos.</p>
+            </div>
+            <div class="item glass">
+                <div class="person flex">
+                    <div class="avatar"></div>
+                    <div><p>John Doe</p><label>WUD FURNITURE</label></div>
+                </div>
+                <p class="subtitle">Archetype organized all our workflows and we even automated some of the steps! We can finally focus on growing the business instead of drowning in chaos.</p>
+            </div>
+        </div>
+</section>
+
+<section class="border-bottom minimal">
+        <h2>Get your life back</h2>
+        <p class="subtitle">Focus on what matters, while automating the rest. Use your precious time on growing business or simply enjoying life.</p>
+</section>
+
+<section class="narrow no-padding">
+    <div class="grid">
+        <div class="block flex">
+            <div class="icon">
+                <img src="assets/icon-glass-shadow.png">
+                <img src="assets/icon-glass.png">
+            </div>
+            <p>Have a romantic dinner instead of answering customer emails</p>
+        </div>
+        <div class="block flex">
+            <div class="icon">
+                <img src="assets/icon-grass-shadow.png">
+                <img src="assets/icon-grass.png">
+            </div>
+            <p>Touch grass instead of sending order confirmations one by one</p>
+        </div>
+        <div class="block flex">
+            <div class="icon">
+                <img src="assets/icon-book-shadow.png">
+                <img src="assets/icon-book.png">
+            </div>
+            <p>Read the kids a bedtime story instead of nudging Bob to finish that task</p>
+        </div>
+        <div class="block flex">
+            <div class="icon">
+                <img src="assets/icon-pot-shadow.png">
+                <img src="assets/icon-pot.png">
+            </div>
+            <p>Cook lunch for the fam instead of chasing unpaid invoices</p>
+        </div>
+        <div class="block flex">
+            <div class="icon">
+                <img src="assets/icon-piano-shadow.png">
+                <img src="assets/icon-piano.png">
+            </div>
+            <p>Learn that piano melody instead of updating spreadsheet rows</p>
+        </div>
+        <div class="block flex">
+            <div class="icon">
+                <img src="assets/icon-weights-shadow.png">
+                <img src="assets/icon-weights.png">
+            </div>
+            <p>Build some muscle instead of calculating quotes for each of your clients</p>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="flex">
+        <img src="assets/archetype-logo-white.svg">
+        <div class="mobile-hide">
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Request access</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <p>Supercharge your work with the power of AI</p>
+    <label style="opacity:0.5">© 2025 Archetype, Inc. All rights reserved.</label>
+</section>
+
 </div>
 <script>
 cards = [
@@ -147,7 +243,7 @@ function placeCard() {
     const randomIndex = Math.floor(Math.random() * cards.length);
     const randomCard = cards[randomIndex];
 
-    card = $('<div class="card"><span class="checkmark"></span></div>')
+    card = $('<div class="card glass"><span class="checkmark"></span></div>')
     typeWriterEffect(card[0], randomCard)
     $(card).prepend('<span class="bullet"></span>')
     card.css('margin-top',random(-150,100)+'px')
