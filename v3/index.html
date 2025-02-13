@@ -6,7 +6,7 @@
 
 <div class="wrap border-left border-right">
 
-<div class="header flex border-bottom border-top">
+<div class="header flex border-bottom border-right border-left">
     <div class="menu flex">
         <div class="button ghost hamburger"></div>
 
@@ -14,13 +14,13 @@
         <a href="#" class="button ghost" data-page="about">About <span class="tooltip"><label>WE'RE HIRING!</label></span></a>
         <a href="#" class="button ghost" data-page="contact">Contact</a>
     </div>
-    <a href="#"><img class="logo" src="assets/archetype-symbol.svg" height="64px"/></a>
+    <a href="#"><img class="logo" src="assets/archetype-logo-animated.gif" height="64px"/></a>
     <div class="flex">
         <a href="#" class="button login">LOGIN</a>
     </div>
 </div>
 
-<section class="flex">
+<section class="flex border-top">
     <div class="left">
         <h1>AI that actually <br>lets you do more</h1>
         <p class="subtitle">Supercharge your business with a customizable platform that thinks, organizes and acts like you would.</p>
@@ -214,6 +214,26 @@
 
 </div>
 <script>
+// Get the logo element
+const logo = document.querySelector('.logo');
+
+// Store the GIF source
+const gifSrc = logo.src;
+
+// Set initial image to a static frame (assuming there's a static version)
+logo.src = gifSrc.replace('.gif', '-static.svg');
+
+// Add hover listener to play animation
+logo.addEventListener('mouseover', function() {
+    this.src = gifSrc;
+});
+
+// Add mouseout listener to reset to static
+logo.addEventListener('mouseout', function() {
+    this.src = gifSrc.replace('.gif', '-static.svg');
+});
+
+
 cards = [
     'Detect new lead from inbox',
     'Calculate total cost',

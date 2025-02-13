@@ -11,7 +11,8 @@ body {
     background:#f7f5ef;
     font-family: 'ABC Diatype Variable';
     font-size:14px;
-    color:rgba(0,0,0,0.8)
+    color:rgba(0,0,0,0.8);
+    margin-top:63px;
 }
 * {
     transition: all .1s;
@@ -193,6 +194,15 @@ label.fill {
 .header {
     height:64px;
     align-items: center;
+    position: fixed;
+    width:100%;
+    max-width:1500px;
+    top:0;
+    left:0;
+    right:0;
+    margin:auto;
+    z-index: 3;
+    background:#f7f5ef;
 }
 .header .button {
     margin-right:8px;
