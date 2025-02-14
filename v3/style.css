@@ -25,7 +25,7 @@ body {
 }
 h1,h2,h3 {
     font-weight:900;
-    line-height:90%;
+    line-height:100%;
     letter-spacing: -2px;
     margin:0;
     color:black
@@ -190,11 +190,13 @@ label.fill {
 .wrap {
     max-width:1500px;
     margin:0 auto;
+    background:#f7f5ef;
+    border-radius: 16px 16px 0 0;
 }
 .header {
     height:64px;
     align-items: center;
-    position: fixed;
+    position: sticky;
     width:100%;
     max-width:1500px;
     top:0;
@@ -203,6 +205,7 @@ label.fill {
     margin:auto;
     z-index: 3;
     background:#f7f5ef;
+    border-radius: 16px 16px 0 0;
 }
 .header .button {
     margin-right:8px;
@@ -315,6 +318,52 @@ section .right {
     height:100%;
     width:512px;
     flex-shrink: 0;
+}
+body {
+    margin-top:100vh;
+}
+section.splash {
+    position:fixed;
+    width:100%;
+    height:100vh;
+    top:0;
+    background: #162CB9;
+    color:white;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+section.splash h2 {
+    max-width:1500px;
+    margin:0 auto;
+    color:white
+}
+section.splash h2 span {
+    transition: all 500ms;
+}
+.scrollHint {
+    position: absolute;
+    top:90%;
+}
+.scrollHint:after {
+    content:" ";
+    margin:auto;
+    display: block;
+    border-right:1px solid white;
+    border-bottom:1px solid white;
+    width:8px;
+    height:8px;
+    transform: rotate(45deg);
+    animation-name: pushDown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes pushDown {
+    0% { margin-top:-2px }
+    20% { margin-top:2px}
+    100% { margin-top:-2px }
 }
 .shadow {
     opacity: 0.05;
@@ -449,8 +498,8 @@ video[shape=a] {
     margin-right:10px;
     margin-left:6px;
 }
-section.black {
-    background:rgba(0,0,0,0.95);
+section.blue {
+    background:#162CB9;
     color:white;
     border-radius:64px;
     padding:100px;
@@ -459,7 +508,7 @@ section.black {
     margin:50px 0;
     height:680px;
 }
-section.black h3 {
+section.blue h3 {
     color:white;
     line-height:110%;
     position: relative;

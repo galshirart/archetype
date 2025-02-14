@@ -4,9 +4,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://archetype.do/favicon.ico"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<div class="wrap border-left border-right">
+<section class="splash flex">
+    <h2>While big tech chases the next big thing, your small business is fueling the real economy. We deliver enterprise-level power that cuts busywork, saves money, and frees you to focus on what really matters. Finally, real tech for real businesses.</h2>
+    <div class="scrollHint"><img src="assets/mouse-icon.svg" /></div>
+</section>
 
-<div class="header flex border-bottom border-right border-left">
+<div class="wrap border-left border-right border-top">
+
+<div class="header flex border-bottom">
     <div class="menu flex">
         <div class="button ghost hamburger"></div>
 
@@ -95,7 +100,7 @@
     <div class="shadow"></div>
 </section>
 
-<section class="black">
+<section class="blue">
     <h3></h3>
 </section>
 
@@ -214,6 +219,54 @@
 
 </div>
 <script>
+
+// Fade in effect for splash h2
+function fadeInText(element, text, speed) {
+    element.innerHTML = '';
+    
+    // Create span for each letter with initial opacity 0.3
+    text.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.opacity = '0.1';
+        element.appendChild(span);
+    });
+
+    // Fade in each letter sequentially
+    const letters = element.querySelectorAll('span');
+    letters.forEach((letter, i) => {
+        setTimeout(() => {
+            letter.style.opacity = '1';
+        }, speed * i);
+    });
+}
+
+// Get the splash h2 element
+const splashText = document.querySelector('.splash h2');
+const originalText = splashText.textContent;
+
+// Start fade in effect when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    fadeInText(splashText, originalText, 30);
+});
+
+
+// Handle splash section fade out on scroll
+window.addEventListener('scroll', function() {
+    const splash = document.querySelector('.splash');
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    // Calculate opacity based on scroll position
+    // Fade out over the first viewport height of scrolling
+    const opacity = Math.max(0, 1 - (scrollPosition / windowHeight));
+    
+    // Apply the calculated opacity
+    splash.style.opacity = opacity;
+});
+
+
+
 // Get the logo element
 const logo = document.querySelector('.logo');
 
@@ -232,7 +285,6 @@ logo.addEventListener('mouseover', function() {
 logo.addEventListener('mouseout', function() {
     this.src = gifSrc.replace('.gif', '-static.svg');
 });
-
 
 cards = [
     'Detect new lead from inbox',
@@ -299,6 +351,8 @@ function typeWriterEffect(element, text, speed = 20) {
     }
     type();
 }
+
+
 
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -377,17 +431,17 @@ handleStatAnimation();
 });
 
 function handleTypewriterAnimation() {
-    const blackSection = document.querySelector('section.black h3');
+    const blueSection = document.querySelector('section.blue h3');
     const text = "Your business isn't a template. Why should your tech be? Big players get custom solutions, while you're stuck with clunky, one-size-fits-none tools. That's why we bring enterprise-grade power to small business.";
     
-    if (isElementInViewport(blackSection) && !blackSection.hasAttribute('data-animated')) {
-        blackSection.setAttribute('data-animated', 'true');
-        blackSection.textContent = '';
+    if (isElementInViewport(blueSection) && !blueSection.hasAttribute('data-animated')) {
+        blueSection.setAttribute('data-animated', 'true');
+        blueSection.textContent = '';
         
         let i = 0;
         function typeWriter() {
             if (i < text.length) {
-                blackSection.textContent += text.charAt(i);
+                blueSection.textContent += text.charAt(i);
                 i++;
                 setTimeout(typeWriter, 30);
             }
@@ -397,9 +451,9 @@ function handleTypewriterAnimation() {
 }
 
 
-// Handle ripple effect on black section hover
+// Handle ripple effect on blue section hover
 let lastCircleTime = 0;
-$('section.black').on('mousemove', function(e) {
+$('section.blue').on('mousemove', function(e) {
     const now = Date.now();
     if (now - lastCircleTime < 100) return;
     lastCircleTime = now;
