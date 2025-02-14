@@ -5,8 +5,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <section class="splash flex">
-    <h2>While big tech chases the next big thing, your small business is fueling the real economy. We deliver enterprise-level power that cuts busywork, saves money, and frees you to focus on what really matters. Finally, real tech for real businesses.</h2>
-    <div class="scrollHint"><img src="assets/mouse-icon.svg" /></div>
+    <div class="text">
+        <h2>Your small business fuels the real economy, yet tech giants only serve big companies.</h2>
+        <h2>Archetype delivers enterprise-level power that cuts busywork, saves money, and frees you to focus on what really matters.</h2>
+        <h2>Real tech for real businesses.</h2>
+        <div class="scrollHint"><img src="assets/mouse-icon.svg" /></div>
+    </div>
 </section>
 
 <div class="wrap border-left border-right border-top">
@@ -220,34 +224,56 @@
 </div>
 <script>
 
-// Fade in effect for splash h2
+// Fade in effect for splash h2s
 function fadeInText(element, text, speed) {
-    element.innerHTML = '';
-    
-    // Create span for each letter with initial opacity 0.3
-    text.split('').forEach((char, i) => {
-        const span = document.createElement('span');
-        span.textContent = char;
-        span.style.opacity = '0.1';
-        element.appendChild(span);
-    });
+    return new Promise(resolve => {
+        element.innerHTML = '';
+        
+        // Create span for each letter
+        text.split('').forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            span.style.opacity = '0.1'; // Set initial opacity
+            element.appendChild(span);
+        });
 
-    // Fade in each letter sequentially
-    const letters = element.querySelectorAll('span');
-    letters.forEach((letter, i) => {
-        setTimeout(() => {
-            letter.style.opacity = '1';
-        }, speed * i);
+        // Fade in each letter sequentially
+        const letters = element.querySelectorAll('span');
+        let completed = 0;
+        
+        letters.forEach((letter, i) => {
+            setTimeout(() => {
+                letter.style.opacity = '1';
+                completed++;
+                if (completed === letters.length) {
+                    resolve();
+                }
+            }, speed * i);
+        });
     });
 }
 
-// Get the splash h2 element
-const splashText = document.querySelector('.splash h2');
-const originalText = splashText.textContent;
+// Get all splash h2 elements and set initial opacity
+document.querySelectorAll('.splash h2').forEach(h2 => {
+    const text = h2.textContent;
+    h2.innerHTML = '';
+    text.split('').forEach(char => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.opacity = '0.1';
+        h2.appendChild(span);
+    });
+});
 
 // Start fade in effect when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    fadeInText(splashText, originalText, 30);
+document.addEventListener('DOMContentLoaded', async function() {
+    const splashTexts = document.querySelectorAll('.splash h2');
+    for (const element of splashTexts) {
+        const originalText = element.textContent;
+        await fadeInText(element, originalText, 30);
+        // Add small delay between texts
+        await new Promise(resolve => setTimeout(resolve, 200));
+    }
 });
 
 
