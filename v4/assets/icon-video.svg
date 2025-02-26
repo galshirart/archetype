@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="14px" viewBox="0 0 22 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-video</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Frame-1" transform="translate(-211, -787)" stroke="#000000" stroke-width="1.5">
+            <g id="Group-14" transform="translate(212, 781)">
+                <g id="icon-video" transform="translate(0, 6)">
+                    <rect id="Rectangle" x="0" y="1" width="14" height="12" rx="2"></rect>
+                    <path d="M14,5.81818182 L18.3038542,1.64474748 C18.7003396,1.26027675 19.3334297,1.2700166 19.7179004,1.66650203 C19.8988216,1.85307706 20,2.10275802 20,2.36264787 L20,11.6373521 C20,12.1896369 19.5522847,12.6373521 19,12.6373521 C18.7401101,12.6373521 18.4904292,12.5361738 18.3038542,12.3552525 L14,8.18181818 L14,8.18181818" id="Path-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
